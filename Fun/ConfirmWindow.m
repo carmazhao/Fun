@@ -8,6 +8,7 @@
 
 #import "ConfirmWindow.h"
 #import "GameState.h"
+#import "ControlCreater.h"
 
 
 @implementation ConfirmWindow
@@ -32,19 +33,13 @@
     [self addChild:background];
     
     //下一关
-    CCSprite * next_btn_normal = [CCSprite spriteWithFile:@"Icon-Small-50.png"];
-    next_btn_normal.scale = ([GameState get_instance]).m_scale;
-    next_btn_normal.contentSize = CGSizeMake(next_btn_normal.contentSize.width * [GameState get_instance].m_scale, next_btn_normal.contentSize.height*[GameState get_instance].m_scale);
-    
-    CCSprite * next_btn_down = [CCSprite spriteWithFile:@"Icon-Small-50.png"];
-    next_btn_down.scale = ([GameState get_instance]).m_scale;
-    next_btn_down.contentSize = CGSizeMake(next_btn_down.contentSize.width * [GameState get_instance].m_scale, next_btn_down.contentSize.height*[GameState get_instance].m_scale);
-    next_btn_down.color = ccYELLOW;
-    
-    CCMenuItemSprite * next_btn_item = [CCMenuItemSprite itemWithNormalSprite:next_btn_normal selectedSprite:next_btn_down target: [self parent] selector:@selector(go_next_game:)];
-    
-    CCMenu * next_menu = [CCMenu menuWithItems:next_btn_item , nil];
+    CCMenu * next_menu = [[ControlCreater get_instance]create_simple_button:@"Icon-Small-50.png" :@"Icon-Small-50.png" :[self parent] :@selector(go_next_game:)];
     next_menu.position = CGPointMake(win_size.width/2, win_size.height/2);
     [self addChild:next_menu];
+    
+    //返回
+    CCMenu * back_menu = [[ControlCreater get_instance]create_simple_button:@"Icon-Small-50.png" :@"Icon-Small-50.png" :[self parent] :@selector(back_to_selection:)];
+    back_menu.position = CGPointMake(win_size.width/2+50, win_size.height/2);
+    [self addChild:back_menu];
 }
 @end

@@ -12,7 +12,10 @@
 #import "GameBlock.h"
 #import "GamePoint.h"
 #import "ScoreCounter.h"
-
+#import "RoundSelectionData.h"
+#import "ConfirmWindow.h"
+#import "IntroLayer.h"
+#import "LoadingView.h"
 
 @implementation GameTypeTwoView
 @synthesize m_block_arr;
@@ -349,7 +352,7 @@
                 continue;
             }
             if (!tmp.m_passed) {
-                return;
+                //return;
             }
         }
         [self game_pass];
@@ -366,6 +369,44 @@
 }
 
 -(void)game_pass{
+    //将计时器停住
+    [self unscheduleAllSelectors];
+    NSInteger level = [[ScoreCounter get_instance]get_game_score_level];
+    NSInteger score = 0;
+    switch (level) {
+        case H_1_LIMIT:
+        case H_1_SCORE:
+            score = 3;
+            break;
+        case H_2_LIMIT:
+        case H_2_SCORE:
+            score = 2;
+            break;
+        case H_3_LIMIT:
+        case H_3_SCORE:
+            score = 1;
+            break;
+        case H_4_LIMIT:
+        case H_4_SCORE:
+            score = 0;
+            break;
+        default:
+            break;
+    }
     
+    ViewData * vd = [RoundData get_instance].m_cur_round;
+    [[RoundSelectionData get_instance]change_data:vd :score];
+    ConfirmWindow * cf_win = [ConfirmWindow create_confirm_window];
+    [self addChild:cf_win];
+}
+
+-(void)go_next_game:(id)sender {
+    ViewData * v_d = [[RoundData get_instance]get_next_game];
+    //进入loading页面
+    [[CCDirector sharedDirector]replaceScene:[LoadingView sceneWithType:LOAD_GAME_ROUND_INFO :v_d]];
+}
+
+-(void)back_to_selection:(id)sender {
+    [[CCDirector sharedDirector]replaceScene:[CCTransitionMoveInL transitionWithDuration:0.3 scene:[IntroLayer scene]]];
 }
 @end

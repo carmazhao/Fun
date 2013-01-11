@@ -12,6 +12,7 @@
 #import "LoadingView.h"
 #import "GameTypeOneView.h"
 #import "ViewData.h"
+#import "ControlCreater.h"
 
 
 @implementation SelectionPage
@@ -68,18 +69,7 @@
     }
     
     //创建返回按钮
-    CCSprite * back_btn_normal = [CCSprite spriteWithFile:@"pic/backbt.png"];
-    back_btn_normal.scale = ([GameState get_instance]).m_scale;
-    back_btn_normal.contentSize = CGSizeMake(back_btn_normal.contentSize.width * [GameState get_instance].m_scale, back_btn_normal.contentSize.height*[GameState get_instance].m_scale);
-    
-    CCSprite * back_btn_down = [CCSprite spriteWithFile:@"pic/backbt.png"];
-    back_btn_down.scale = ([GameState get_instance]).m_scale;
-    back_btn_down.contentSize = CGSizeMake(back_btn_down.contentSize.width * [GameState get_instance].m_scale, back_btn_down.contentSize.height*[GameState get_instance].m_scale);
-    back_btn_down.color = ccYELLOW;
-    
-    CCMenuItemSprite * back_btn_item = [CCMenuItemSprite itemWithNormalSprite:back_btn_normal selectedSprite:back_btn_down target:self selector:@selector(back_btn_down:)];
-    
-    CCMenu * menu = [CCMenu menuWithItems:back_btn_item , nil];
+    CCMenu * menu = [[ControlCreater get_instance]create_simple_button:@"pic/backbt.png" :@"pic/backbt.png" :self :@selector(back_btn_down:)];
     menu.position = CGPointMake(96 , 120);
     [self addChild:menu];
     

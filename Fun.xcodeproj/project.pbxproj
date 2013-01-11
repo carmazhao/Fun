@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD3AEF10169FCF8D003153C4 /* ControlCreater.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3AEF0F169FCF8D003153C4 /* ControlCreater.m */; };
 		BD440A2E167761C800E8F4A5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD440A2D167761C800E8F4A5 /* QuartzCore.framework */; };
 		BD440A30167761C800E8F4A5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD440A2F167761C800E8F4A5 /* OpenGLES.framework */; };
 		BD440A32167761C800E8F4A5 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD440A31167761C800E8F4A5 /* OpenAL.framework */; };
@@ -156,6 +157,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD3AEF0E169FCF8D003153C4 /* ControlCreater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlCreater.h; sourceTree = "<group>"; };
+		BD3AEF0F169FCF8D003153C4 /* ControlCreater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlCreater.m; sourceTree = "<group>"; };
 		BD440A29167761C800E8F4A5 /* Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD440A2D167761C800E8F4A5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BD440A2F167761C800E8F4A5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -979,20 +982,22 @@
 			name = GameGeneral;
 			sourceTree = "<group>";
 		};
-		BDECF3481678BB5D00637380 /* ToolViewClass */ = {
+		BDECF3481678BB5D00637380 /* ToolClass */ = {
 			isa = PBXGroup;
 			children = (
 				BDEC6CF1167A09B700304640 /* ScrollPageView.h */,
 				BDEC6CF2167A09B700304640 /* ScrollPageView.m */,
+				BD3AEF0E169FCF8D003153C4 /* ControlCreater.h */,
+				BD3AEF0F169FCF8D003153C4 /* ControlCreater.m */,
 			);
-			name = ToolViewClass;
+			name = ToolClass;
 			sourceTree = "<group>";
 		};
 		BDECF3491678BB7400637380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BDE29C321696F44C00CFE20E /* GameTypeThreeView */,
-				BDECF3481678BB5D00637380 /* ToolViewClass */,
+				BDECF3481678BB5D00637380 /* ToolClass */,
 				BDECD87D168BD83E009ADC71 /* GameGeneral */,
 				BDECD87B168BD80C009ADC71 /* GameTypeTwoView */,
 				BDD1EAFB16873C00005C8AD1 /* GameTypeOneView */,
@@ -1209,6 +1214,7 @@
 				BDE29C3D1696FCE400CFE20E /* TypeThreeInfoMeta.m in Sources */,
 				BDC2EDFE169D9744007E43D3 /* ViewData.m in Sources */,
 				BDC9AB97169EF78700A144D2 /* ConfirmWindow.m in Sources */,
+				BD3AEF10169FCF8D003153C4 /* ControlCreater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
