@@ -56,8 +56,8 @@ static RoundSelectionData * m_inst;
     unsigned char       degree_of_game = 0;
     for (NSInteger i = 0; i < num_of_page; i++) {
         //清空meta
-        [meta_data release];
-        meta_data = nil;
+        [meta_data release];    
+        meta_data = nil; 
         meta_data = [[RoundSelectionMeta alloc]init];
         
         //获取每种游戏的size
@@ -95,6 +95,40 @@ static RoundSelectionData * m_inst;
     //NSLog(@"%d , %d" , page_num , game_num);
     NSNumber * game_value = [NSNumber numberWithInteger:value];
     [((RoundSelectionMeta*)[m_game_arr objectAtIndex:page_num]).m_round_level_arr replaceObjectAtIndex:game_num withObject:game_value];
+    
+    
+    //写入文件
+    NSInteger begin_pos = 0;
+    //关卡的页数
+    begin_pos += 1;
+    RoundSelectionMeta * meta;
+    for (NSInteger i = 0; i < page_num; i++) {
+        //加上size信息
+        begin_pos += 1;
+        //总数信息
+        begin_pos += 1;
+        
+        //计算每个小方格
+        meta = [m_game_arr objectAtIndex:i];
+        for (NSInteger j = 0; j < [meta.m_round_level_arr count]; j++) {
+            begin_pos += 1;
+        }
+    }
+    //加上当前页的信息
+    //加上size信息
+    begin_pos += 1;
+    //总数信息
+    begin_pos += 1;
+    
+    //计算每个小方格
+    begin_pos += game_num;
+    //NSLog(@"%d" , (int)sizeof(unsigned char));
+    //写入信息
+    unsigned char char_value = value;
+    NSString  *     path = [[NSBundle mainBundle]pathForResource:@"ini/game_ini" ofType:@""];
+    m_data = [NSMutableData dataWithContentsOfFile:path];
+    [m_data replaceBytesInRange:NSMakeRange(begin_pos, sizeof(unsigned char)) withBytes:&char_value length:sizeof(char_value)];
+    [m_data writeToFile:path atomically:YES];
 }
 
 @end

@@ -996,14 +996,14 @@
 		BDECF3491678BB7400637380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BDE29C321696F44C00CFE20E /* GameTypeThreeView */,
-				BDECF3481678BB5D00637380 /* ToolClass */,
 				BDECD87D168BD83E009ADC71 /* GameGeneral */,
-				BDECD87B168BD80C009ADC71 /* GameTypeTwoView */,
 				BDD1EAFB16873C00005C8AD1 /* GameTypeOneView */,
-				BDC4FB28167D4E960083AFA2 /* RoundSelectionViews */,
+				BDE29C321696F44C00CFE20E /* GameTypeThreeView */,
+				BDECD87B168BD80C009ADC71 /* GameTypeTwoView */,
 				BDECF34E1678D08000637380 /* LoadingView.h */,
 				BDECF34F1678D08000637380 /* LoadingView.m */,
+				BDC4FB28167D4E960083AFA2 /* RoundSelectionViews */,
+				BDECF3481678BB5D00637380 /* ToolClass */,
 			);
 			name = Views;
 			sourceTree = "<group>";

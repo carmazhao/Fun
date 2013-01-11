@@ -11,6 +11,11 @@
 #import "RoundData.h"
 #import "GamePoint.h"
 #import "ScoreCounter.h"
+#import "ControlCreater.h"
+#import "RoundSelectionData.h"
+#import "ConfirmWindow.h"
+#import "LoadingView.h"
+#import "IntroLayer.h"
 
 
 @implementation GameTypeThreeView
@@ -60,6 +65,8 @@
     m_score_label.scale = [GameState get_instance].m_scale;
     [self addChild:m_score_label];
 
+    //构造各种按钮
+    [self create_up_btns];
     
     //构造块
     if ([RoundData get_instance].m_type_three_meta == nil) {
@@ -141,6 +148,30 @@
     [self addChild:m_line_view];
 }
 
+-(void)create_up_btns{
+    //创建reset按钮
+    CCMenu * reset_menu = [[ControlCreater get_instance]create_simple_button:@"pic/resetbt.png" :@"pic/resetbt.png" :self :@selector(game_reset:)];
+    reset_menu.position = CGPointMake(240, 450);
+    [self addChild:reset_menu];
+    
+    //创建menu按钮
+    CCMenu * menu_menu = [[ControlCreater get_instance]create_simple_button:@"pic/menubt.png" :@"pic/menubt.png" :self :@selector(menu_btn_down:)];
+    menu_menu.position = CGPointMake(50, 450);
+    [self addChild:menu_menu];
+}
+
+
+-(void)game_reset:(id)sender{
+    [[ScoreCounter get_instance]reset];
+    [m_score_label setString:@"0"];
+    [[ScoreCounter get_instance]reset];
+}
+
+-(void)menu_btn_down:(id)sender {
+    
+}
+
+
 -(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch * touch = [touches anyObject];
     CGPoint pos = [touch locationInView:[touch view]];
@@ -188,12 +219,6 @@
     [line release];
     if (CGRectContainsPoint([m_end_block.m_sprite boundingBox], pos)&&
         m_end_block.m_passed == YES) {
-        for (NSInteger i = 0; i < [m_block_arr count]; i++) {
-            GameBlock * tmp = [m_block_arr objectAtIndex:i];
-            if (!tmp.m_passed) {
-                return;
-            }
-        }
         [self game_pass];
     }
 }
@@ -211,7 +236,43 @@
 }
 
 -(void)game_pass{
+    NSInteger level = [[ScoreCounter get_instance]get_game_score_level];
+    NSInteger score = 0;
+    switch (level) {
+        case H_1_LIMIT:
+        case H_1_SCORE:
+            score = 3;
+            break;
+        case H_2_LIMIT:
+        case H_2_SCORE:
+            score = 2;
+            break;
+        case H_3_LIMIT:
+        case H_3_SCORE:
+            score = 1;
+            break;
+        case H_4_LIMIT:
+        case H_4_SCORE:
+            score = 0;
+            break;
+        default:
+            break;
+    }
     
+    ViewData * vd = [RoundData get_instance].m_cur_round;
+    [[RoundSelectionData get_instance]change_data:vd :score];
+    ConfirmWindow * cf_win = [ConfirmWindow create_confirm_window];
+    [self addChild:cf_win];
+}
+
+-(void)go_next_game:(id)sender {
+    ViewData * v_d = [[RoundData get_instance]get_next_game];
+    //进入loading页面
+    [[CCDirector sharedDirector]replaceScene:[LoadingView sceneWithType:LOAD_GAME_ROUND_INFO :v_d]];
+}
+
+-(void)back_to_selection:(id)sender {
+    [[CCDirector sharedDirector]replaceScene:[CCTransitionMoveInL transitionWithDuration:0.3 scene:[IntroLayer scene]]];
 }
 
 @end

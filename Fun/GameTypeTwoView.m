@@ -16,6 +16,7 @@
 #import "ConfirmWindow.h"
 #import "IntroLayer.h"
 #import "LoadingView.h"
+#import "ControlCreater.h"
 
 @implementation GameTypeTwoView
 @synthesize m_block_arr;
@@ -177,37 +178,14 @@
 
 -(void)create_up_btns{
     //创建reset按钮
-    CCSprite * reset_btn_normal = [CCSprite spriteWithFile:@"pic/resetbt.png"];
-    reset_btn_normal.scale = ([GameState get_instance]).m_scale;
-    reset_btn_normal.contentSize = CGSizeMake(reset_btn_normal.contentSize.width * [GameState get_instance].m_scale, reset_btn_normal.contentSize.height*[GameState get_instance].m_scale);
-    
-    CCSprite * reset_btn_down = [CCSprite spriteWithFile:@"pic/resetbt.png"];
-    reset_btn_down.scale = ([GameState get_instance]).m_scale;
-    reset_btn_down.contentSize = CGSizeMake(reset_btn_down.contentSize.width * [GameState get_instance].m_scale, reset_btn_down.contentSize.height*[GameState get_instance].m_scale);
-    reset_btn_down.color = ccYELLOW;
-    
-    CCMenuItemSprite * reset_btn_item = [CCMenuItemSprite itemWithNormalSprite:reset_btn_normal selectedSprite:reset_btn_down target:self selector:@selector(game_reset:)];
-    
-    CCMenu * reset_menu = [CCMenu menuWithItems:reset_btn_item , nil];
+    CCMenu * reset_menu = [[ControlCreater get_instance]create_simple_button:@"pic/resetbt.png" :@"pic/resetbt.png" :self :@selector(game_reset:)];
     reset_menu.position = CGPointMake(240, 450);
     [self addChild:reset_menu];
     
     //创建menu按钮
-    CCSprite * menu_btn_normal = [CCSprite spriteWithFile:@"pic/menubt.png"];
-    menu_btn_normal.scale = ([GameState get_instance]).m_scale;
-    menu_btn_normal.contentSize = CGSizeMake(menu_btn_normal.contentSize.width * [GameState get_instance].m_scale, menu_btn_normal.contentSize.height*[GameState get_instance].m_scale);
-    
-    CCSprite * menu_btn_down = [CCSprite spriteWithFile:@"pic/menubt.png"];
-    menu_btn_down.scale = ([GameState get_instance]).m_scale;
-    menu_btn_down.contentSize = CGSizeMake(menu_btn_down.contentSize.width * [GameState get_instance].m_scale, menu_btn_down.contentSize.height*[GameState get_instance].m_scale);
-    menu_btn_down.color = ccYELLOW;
-    
-    CCMenuItemSprite * menu_btn_item = [CCMenuItemSprite itemWithNormalSprite:menu_btn_normal selectedSprite:menu_btn_down target:self selector:@selector(menu_btn_down:)];
-    
-    CCMenu * menu_menu = [CCMenu menuWithItems:menu_btn_item , nil];
+    CCMenu * menu_menu = [[ControlCreater get_instance]create_simple_button:@"pic/menubt.png" :@"pic/menubt.png" :self :@selector(menu_btn_down:)];
     menu_menu.position = CGPointMake(50, 450);
     [self addChild:menu_menu];
-    
 }
 
 -(void)game_reset:(id)sender{
@@ -234,6 +212,9 @@
     [self create_hearts_and_timer];
 }
 
+-(void)menu_btn_down:(id)sender {
+
+}
 -(void)updateHeartData:(ccTime)delta{
     [[ScoreCounter get_instance] update];
     NSInteger   change = [[ScoreCounter get_instance] ready_to_change];

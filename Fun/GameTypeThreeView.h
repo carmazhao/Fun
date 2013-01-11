@@ -24,7 +24,7 @@
 +(id)scene;
 -(GameTypeThreeView *)init;
 -(void)create_up_btns;
--(void)create_hearts_and_timer;
+//-(void)create_hearts_and_timer;
 -(void)game_pass;
 -(void)game_reset:(id)sender;
 
