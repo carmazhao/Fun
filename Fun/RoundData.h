@@ -19,7 +19,7 @@
 @interface RoundData : NSObject
 
 @property(nonatomic)NSInteger                   m_type;
-@property(nonatomic , retain)ViewData*                   m_cur_round;//记录当前第几关
+@property(nonatomic , retain)ViewData*          m_cur_round;//记录当前第几关
 
 @property(nonatomic , retain)TypeOneInfoMeta *  m_type_one_meta;
 @property(nonatomic , retain)TypeTwoInfoMeta *  m_type_two_meta;
@@ -29,5 +29,7 @@
 +(RoundData *)get_instance;
 -(RoundData *)init;
 -(NSInteger)load_round_data:(ViewData*)game_index;
+
+-(ViewData *)get_next_game;
 
 @end

@@ -14,6 +14,7 @@
 #import "ScoreCounter.h"
 #import "RoundSelectionData.h"
 #import "ConfirmWindow.h"
+#import "LoadingView.h"
 //for test
 //#import "RoundSelectionView.h"
 
@@ -358,5 +359,11 @@
     [[RoundSelectionData get_instance]change_data:vd :score];
     ConfirmWindow * cf_win = [ConfirmWindow create_confirm_window];
     [self addChild:cf_win];
+}
+
+-(void)go_next_game:(id)sender{
+    ViewData * v_d = [[RoundData get_instance]get_next_game];
+    //进入loading页面
+    [[CCDirector sharedDirector]replaceScene:[LoadingView sceneWithType:LOAD_GAME_ROUND_INFO :v_d]];
 }
 @end

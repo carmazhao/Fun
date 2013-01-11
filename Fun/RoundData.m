@@ -9,6 +9,8 @@
 #import "RoundData.h"
 #import "GamePoint.h"
 #import "ViewData.h"
+#import "RoundSelectionData.h"
+#import "RoundSelectionMeta.h"
 
 static RoundData * m_inst;
 @implementation RoundData
@@ -222,5 +224,16 @@ static RoundData * m_inst;
     return m_type;
 }
 
-
+-(ViewData *)get_next_game {
+    ViewData * vd = [[ViewData alloc]init];
+    RoundSelectionMeta* cur_page = [[RoundSelectionData get_instance].m_game_arr objectAtIndex:m_cur_round.m_page_num];
+    if ([cur_page.m_round_level_arr count]-1 <= m_cur_round.m_game_index) {
+        vd.m_page_num = m_cur_round.m_page_num+1;
+        vd.m_game_index = 0;
+    }else{
+        vd.m_page_num = m_cur_round.m_page_num;
+        vd.m_game_index = m_cur_round.m_game_index+1;
+    }
+    return vd;
+}
 @end
