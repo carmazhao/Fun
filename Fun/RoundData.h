@@ -10,11 +10,13 @@
 #import "TypeOneInfoMeta.h"
 #import "TypeTwoInfoMeta.h"
 #import "TypeThreeInfoMeta.h"
+#import "TypeBombInfoMeta.h"
 #import "ViewData.h"
 
 #define TYPE_ONE_INFO_META 0
 #define TYPE_TWO_INFO_META 1
 #define TYPE_THREE_INFO_META 2
+#define TYPE_BOMB_INFO_META 3
 
 @interface RoundData : NSObject
 
@@ -24,6 +26,7 @@
 @property(nonatomic , retain)TypeOneInfoMeta *  m_type_one_meta;
 @property(nonatomic , retain)TypeTwoInfoMeta *  m_type_two_meta;
 @property(nonatomic , retain)TypeThreeInfoMeta *m_type_three_meta;
+@property(nonatomic , retain)TypeBombInfoMeta * m_type_bomb_meta;
 
 
 +(RoundData *)get_instance;

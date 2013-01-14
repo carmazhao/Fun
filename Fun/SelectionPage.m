@@ -32,7 +32,6 @@
         m_level_arr = [[NSMutableArray alloc]init];
         self.isTouchEnabled = YES;
         m_touch_locked = NO;
-        m_page_num = 0;
         m_page_num = page_num;
     }
     return  self;
@@ -124,6 +123,12 @@
         m_touch_locked = NO;
         return;
     }
+    //边界检查
+    NSInteger bound_x = self.parent.position.x + self.position.x;
+    if (bound_x < 0 ||
+        bound_x >= [[CCDirector sharedDirector]winSize].width) {
+        return;
+    }
     UITouch * touch = [touches anyObject];
     CGPoint pos = [touch locationInView:[touch view]];
     pos = [[CCDirector sharedDirector] convertToGL:pos];
@@ -136,8 +141,11 @@
             v_d = [[ViewData alloc]init];
             v_d.m_game_index = i;
             v_d.m_page_num = m_page_num;
+            NSLog(@"%d page number  " , m_page_num);
             //进入loading页面
             [[CCDirector sharedDirector]replaceScene:[LoadingView sceneWithType:LOAD_GAME_ROUND_INFO :v_d]];
+            [v_d release];
+            v_d = nil;
         }
     }
 }

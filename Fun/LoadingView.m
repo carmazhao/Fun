@@ -13,6 +13,7 @@
 #import "GameTypeOneView.h"
 #import "GameTypeTwoView.h"
 #import "GameTypeThreeView.h"
+#import "GameTypeBombView.h"
 
 
 @implementation LoadingView
@@ -56,13 +57,14 @@
 -(LoadingView *)initWithType:(NSInteger)type:(ViewData*)param{
     if ((self = [super init])) {
         m_load_type = type;
-        m_param = param;
+        m_param = [param retain];
     }
     return  self;
 }
 
 
 -(void)dealloc{
+    [m_param release];
     [super dealloc];
 }
 
@@ -97,6 +99,8 @@
                 case TYPE_THREE_INFO_META:
                     [[CCDirector sharedDirector]replaceScene:[CCTransitionMoveInR transitionWithDuration:0.5 scene:[GameTypeThreeView scene]]];
                     break;
+                case TYPE_BOMB_INFO_META:
+                    [[CCDirector sharedDirector]replaceScene:[CCTransitionMoveInR transitionWithDuration:0.5 scene:[GameTypeBombView scene]]];break;
                 default:
                     break;
             }

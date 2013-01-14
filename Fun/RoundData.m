@@ -18,6 +18,7 @@ static RoundData * m_inst;
 @synthesize     m_type_one_meta;
 @synthesize     m_type_two_meta;
 @synthesize     m_type_three_meta;
+@synthesize     m_type_bomb_meta;
 @synthesize     m_cur_round;
 
 +(RoundData *)get_instance {
@@ -34,7 +35,6 @@ static RoundData * m_inst;
     return  self;
 }
 -(void)dealloc{
-    [super dealloc];
     if (m_type_one_meta != nil) {
         [m_type_one_meta release];
         m_type_one_meta = nil;
@@ -47,6 +47,8 @@ static RoundData * m_inst;
         [m_type_three_meta release];
         m_type_three_meta = nil;
     }
+    [m_cur_round release];
+    [super dealloc];
 }
 
 /*
@@ -54,7 +56,7 @@ static RoundData * m_inst;
  然后根据不同的需求new出来
  */
 -(NSInteger)load_round_data:(ViewData*)game_index {
-    m_cur_round = game_index;
+    m_cur_round = [game_index retain];
     if (m_type_one_meta != nil) {
         [m_type_one_meta release];
         m_type_one_meta = nil;
@@ -63,7 +65,14 @@ static RoundData * m_inst;
         [m_type_two_meta release];
         m_type_two_meta = nil;
     }
-    
+    if (m_type_three_meta != nil) {
+        [m_type_two_meta release];
+        m_type_two_meta = nil;
+    }
+    if (m_type_bomb_meta != nil) {
+        [m_type_bomb_meta release];
+        m_type_bomb_meta = nil;
+    }
     NSString * str_index = [NSString stringWithFormat:@"ini/%d_%d" , game_index.m_page_num , game_index.m_game_index];
     NSString* path = [[NSBundle mainBundle]pathForResource:str_index ofType:@""];
     
@@ -217,6 +226,53 @@ static RoundData * m_inst;
                 [gp_3 release];
                 gp_3 = nil;
             }
+            break;
+        case TYPE_BOMB_INFO_META:
+            m_type_bomb_meta = [[TypeBombInfoMeta alloc]init];
+            m_type_bomb_meta.m_size = game_size;
+            //获取x
+            [data getBytes:&bx range:NSMakeRange(begin_index, sizeof(bx))];
+            begin_index += sizeof(bx);
+            
+            //获取y
+            [data getBytes:&by range:NSMakeRange(begin_index, sizeof(by))];
+            begin_index += sizeof(by);
+            
+            m_type_bomb_meta.m_begin_pos = CGPointMake(bx, by);
+            
+            //获取x
+            [data getBytes:&ex range:NSMakeRange(begin_index, sizeof(ex))];
+            begin_index += sizeof(ex);
+            
+            //获取y
+            [data getBytes:&ey range:NSMakeRange(begin_index, sizeof(ey))];
+            begin_index += sizeof(ey);
+            
+            m_type_bomb_meta.m_end_pos = CGPointMake(ex, ey);
+            
+            unsigned char num_of_bomb = 0;
+            unsigned char b_x = 0;
+            unsigned char b_y = 0;
+            
+            [data getBytes:&num_of_bomb range:NSMakeRange(begin_index, sizeof(num_of_bomb))];
+            begin_index += sizeof(num_of_bomb);
+            
+            GamePoint * gp_b = nil;
+            for (NSInteger i = 0; i < num_of_bomb;i++) {
+                [data getBytes:&b_x range:NSMakeRange(begin_index, sizeof(b_x))];
+                begin_index += sizeof(b_x);
+                [data getBytes:&b_y range:NSMakeRange(begin_index, sizeof(b_y))];
+                begin_index += sizeof(b_y);
+                
+                gp_b = [[GamePoint alloc]init];
+                gp_b.m_x = b_x;
+                gp_b.m_y = b_y;
+                //  NSLog(@"%d",gp_3.m_value);
+                [m_type_bomb_meta.m_bomb_arr addObject:gp_b];
+                [gp_b release];
+                gp_b = nil;
+            }
+
             break;
         default:
             break;

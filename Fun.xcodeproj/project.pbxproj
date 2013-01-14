@@ -138,6 +138,8 @@
 		BDC4FB2E167D53400083AFA2 /* SelectionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC4FB2D167D53400083AFA2 /* SelectionPage.m */; };
 		BDC7A2481685C58D0031D65E /* TypeOneInfoMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7A2471685C58D0031D65E /* TypeOneInfoMeta.m */; };
 		BDC7A24C1685C6620031D65E /* RoundData.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7A24B1685C6620031D65E /* RoundData.m */; };
+		BDC7DE1716A2A2190031683A /* TypeBombInfoMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7DE1616A2A2190031683A /* TypeBombInfoMeta.m */; };
+		BDC7DE1C16A2A38E0031683A /* GameTypeBombView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7DE1B16A2A38E0031683A /* GameTypeBombView.m */; };
 		BDC9AB97169EF78700A144D2 /* ConfirmWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC9AB96169EF78700A144D2 /* ConfirmWindow.m */; };
 		BDD1EAFF16873C1F005C8AD1 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1EAFE16873C1F005C8AD1 /* LineView.m */; };
 		BDD1EB0216873D2F005C8AD1 /* TraceLine.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1EB0116873D2F005C8AD1 /* TraceLine.m */; };
@@ -430,6 +432,10 @@
 		BDC7A2471685C58D0031D65E /* TypeOneInfoMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeOneInfoMeta.m; sourceTree = "<group>"; };
 		BDC7A24A1685C6620031D65E /* RoundData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundData.h; sourceTree = "<group>"; };
 		BDC7A24B1685C6620031D65E /* RoundData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundData.m; sourceTree = "<group>"; };
+		BDC7DE1516A2A2190031683A /* TypeBombInfoMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeBombInfoMeta.h; sourceTree = "<group>"; };
+		BDC7DE1616A2A2190031683A /* TypeBombInfoMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeBombInfoMeta.m; sourceTree = "<group>"; };
+		BDC7DE1A16A2A38E0031683A /* GameTypeBombView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTypeBombView.h; sourceTree = "<group>"; };
+		BDC7DE1B16A2A38E0031683A /* GameTypeBombView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTypeBombView.m; sourceTree = "<group>"; };
 		BDC9AB95169EF78700A144D2 /* ConfirmWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmWindow.h; sourceTree = "<group>"; };
 		BDC9AB96169EF78700A144D2 /* ConfirmWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmWindow.m; sourceTree = "<group>"; };
 		BDD1EAFD16873C1F005C8AD1 /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
@@ -909,6 +915,15 @@
 			name = RoundSelectionViews;
 			sourceTree = "<group>";
 		};
+		BDC7DE1916A2A36B0031683A /* GameTypeBombView */ = {
+			isa = PBXGroup;
+			children = (
+				BDC7DE1A16A2A38E0031683A /* GameTypeBombView.h */,
+				BDC7DE1B16A2A38E0031683A /* GameTypeBombView.m */,
+			);
+			name = GameTypeBombView;
+			sourceTree = "<group>";
+		};
 		BDD1EAFB16873C00005C8AD1 /* GameTypeOneView */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,6 +967,8 @@
 				BDECD885168BDBB9009ADC71 /* GamePoint.m */,
 				BDE29C3B1696FCE400CFE20E /* TypeThreeInfoMeta.h */,
 				BDE29C3C1696FCE400CFE20E /* TypeThreeInfoMeta.m */,
+				BDC7DE1516A2A2190031683A /* TypeBombInfoMeta.h */,
+				BDC7DE1616A2A2190031683A /* TypeBombInfoMeta.m */,
 			);
 			name = MetaData;
 			sourceTree = "<group>";
@@ -996,6 +1013,7 @@
 		BDECF3491678BB7400637380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDC7DE1916A2A36B0031683A /* GameTypeBombView */,
 				BDECD87D168BD83E009ADC71 /* GameGeneral */,
 				BDD1EAFB16873C00005C8AD1 /* GameTypeOneView */,
 				BDE29C321696F44C00CFE20E /* GameTypeThreeView */,
@@ -1215,6 +1233,8 @@
 				BDC2EDFE169D9744007E43D3 /* ViewData.m in Sources */,
 				BDC9AB97169EF78700A144D2 /* ConfirmWindow.m in Sources */,
 				BD3AEF10169FCF8D003153C4 /* ControlCreater.m in Sources */,
+				BDC7DE1716A2A2190031683A /* TypeBombInfoMeta.m in Sources */,
+				BDC7DE1C16A2A38E0031683A /* GameTypeBombView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
