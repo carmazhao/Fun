@@ -14,7 +14,7 @@
 @synthesize m_begin_block;
 @synthesize m_block_arr;
 @synthesize m_end_block;
-@synthesize m_pre_point;
+@synthesize m_active_block_arr;
 @synthesize m_time_label;
 
 +(id)scene{
@@ -27,6 +27,7 @@
 -(GameTypeBombView * )init{
     if ((self = [super init])) {
         m_block_arr = [[NSMutableArray alloc]init];
+        m_active_block_arr = [[NSMutableArray alloc]init];
         self.isTouchEnabled = YES;
     }
     return self;
@@ -35,6 +36,7 @@
 -(void)dealloc{
     [super dealloc];
     [m_block_arr release];
+    [m_active_block_arr release];
     [m_begin_block release];
     [m_end_block release];
 }
