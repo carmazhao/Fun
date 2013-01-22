@@ -385,9 +385,11 @@
     ViewData * v_d = [[RoundData get_instance]get_next_game];
     //进入loading页面
     [[CCDirector sharedDirector]replaceScene:[LoadingView sceneWithType:LOAD_GAME_ROUND_INFO :v_d]];
+    [[ScoreCounter get_instance]reset];
 }
 
 -(void)back_to_selection:(id)sender {
     [[CCDirector sharedDirector]replaceScene:[CCTransitionMoveInL transitionWithDuration:0.3 scene:[IntroLayer scene]]];
+    [[ScoreCounter get_instance]reset];
 }
 @end

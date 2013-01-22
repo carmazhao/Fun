@@ -55,7 +55,7 @@
     CCSprite * size_label;
     NSInteger size_val = m_meta.m_game_size;
     switch (size_val) {
-        case 4:
+        case 5:
             size_label = [CCSprite spriteWithFile:@"pic/5x5.png"];
             break;
         default:

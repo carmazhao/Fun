@@ -242,7 +242,7 @@
     [self removeChild:tmp_heart cleanup:YES];
     tmp_heart = nil;
     tmp_heart = [CCSprite spriteWithFile:path];
-    tmp_heart.tag = 1;
+    tmp_heart.tag = tag_of_child;
     tmp_heart.position = pos;
     tmp_heart.scale = [GameState get_instance].m_scale;
     [self addChild:tmp_heart];
@@ -295,7 +295,7 @@
         for (NSInteger i = 0; i < [m_block_arr count]; i++) {
             GameBlock * tmp = [m_block_arr objectAtIndex:i];
             if (!tmp.m_passed) {
-               // return;
+                return;
             }
         }
         [self game_pass];
@@ -347,9 +347,11 @@
     ViewData * v_d = [[RoundData get_instance]get_next_game];
     //进入loading页面
     [[CCDirector sharedDirector]replaceScene:[LoadingView sceneWithType:LOAD_GAME_ROUND_INFO :v_d]];
+    [[ScoreCounter get_instance]reset];
 }
 
 -(void)back_to_selection:(id)sender {
     [[CCDirector sharedDirector]replaceScene:[CCTransitionMoveInL transitionWithDuration:0.3 scene:[IntroLayer scene]]];
+    [[ScoreCounter get_instance]reset];
 }
 @end
