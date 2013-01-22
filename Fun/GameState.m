@@ -12,6 +12,7 @@ static GameState * m_inst;
 
 @implementation GameState
 @synthesize m_scale;
+@synthesize m_ratio;
 
 +(GameState *)get_instance {
     if (m_inst == nil) {
@@ -23,6 +24,7 @@ static GameState * m_inst;
 -(GameState*)init {
     if ((self =[super init])) {
         m_scale = 1;
+        m_ratio = 1;
     }
     return  self;
 }

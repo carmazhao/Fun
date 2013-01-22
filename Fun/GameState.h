@@ -11,6 +11,7 @@
 @interface GameState : NSObject {
 }
 @property(nonatomic)float      m_scale;
+@property(nonatomic)float      m_ratio;
 
 +(GameState *)get_instance;
 

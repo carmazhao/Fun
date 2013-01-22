@@ -81,25 +81,27 @@
     NSInteger size = [RoundData get_instance].m_type_one_meta.m_size;
     CGPoint  base_pos = CGPointMake(BASE_X , BASE_Y);
     GameBlock * block;
+    //测试
+    [GameState get_instance].m_ratio = 5.0/((float)size);
+   
     for (NSInteger i = 0; i < size; i++) {
         for (NSInteger j = 0; j < size; j++) {
             block = [GameBlock block];
             [block create_sprite:@"pic/yellowmask.png"];
-            [block set_sprite_pos:CGPointMake(base_pos.x + j*57, base_pos.y + i*57)];
+            [block set_sprite_pos:CGPointMake(base_pos.x + j*57*[GameState get_instance].m_ratio, base_pos.y + i*57*[GameState get_instance].m_ratio)];
             block.m_passed = NO;
             block.m_coor = CGPointMake(j, i);
             
             [self addChild:block.m_sprite];
+            block.m_sprite.scale = [GameState get_instance].m_scale * [GameState get_instance].m_ratio;
             [m_block_arr addObject:block];
             
             //记录开始位置
             if (j == begin_pos.x && i == begin_pos.y) {
-             //   NSLog(@"begin %d %d" , j , i);
                 m_begin_block = [block retain];
             }
             //记录结束位置
             if (j == end_pos.x && i == end_pos.y) {
-            //    NSLog(@"begin %d %d" , j , i);
                 m_end_block = [block retain];
             }
             block = nil;
@@ -108,13 +110,13 @@
   //  NSLog(@"%d" ,(int)[m_block_arr count]);
     //开始坐标和结束坐标标记
     CCSprite * begin_circle = [CCSprite spriteWithFile:@"pic/green.png"];
-    begin_circle.position = CGPointMake(base_pos.x + begin_pos.x*57, base_pos.y + begin_pos.y*57);
-    begin_circle.scale = [GameState get_instance].m_scale;
+    begin_circle.position = CGPointMake(base_pos.x + begin_pos.x*57*[GameState get_instance].m_ratio, base_pos.y + begin_pos.y*57*[GameState get_instance].m_ratio);
+    begin_circle.scale = [GameState get_instance].m_scale*[GameState get_instance].m_ratio;
     [self addChild:begin_circle];
     
     CCSprite * end_circle = [CCSprite spriteWithFile:@"pic/greencircle.png"];
-    end_circle.position = CGPointMake(base_pos.x + end_pos.x*57, base_pos.y + end_pos.y*57);
-    end_circle.scale = [GameState get_instance].m_scale;
+    end_circle.position = CGPointMake(base_pos.x + end_pos.x*57*[GameState get_instance].m_ratio, base_pos.y + end_pos.y*57*[GameState get_instance].m_ratio);
+    end_circle.scale = [GameState get_instance].m_scale*[GameState get_instance].m_ratio;
     [self addChild:end_circle];
     
     //构造上方的按钮们
@@ -265,9 +267,22 @@
     pos = [[CCDirector sharedDirector]convertToGL:pos];
     
     TraceLine * line = [[TraceLine alloc]init];
+    
+    if (CGRectContainsPoint([m_end_block.m_sprite boundingBox], pos)&&
+        m_end_block.m_passed != YES) {
+        m_end_block.m_passed = YES;
+        for (NSInteger i = 0; i < [m_block_arr count]; i++) {
+            GameBlock * tmp = [m_block_arr objectAtIndex:i];
+            if (!tmp.m_passed) {
+                return;
+            }
+        }
+        [self game_pass];
+    }
+    
     if (m_begin_block.m_passed == YES) {
         for (NSInteger i = 0; i < [m_block_arr count]; i++) {
-          //  NSLog(@"%d" , (int)i);
+            //  NSLog(@"%d" , (int)i);
             GameBlock * tmp = [m_block_arr objectAtIndex:i];
             if (tmp.m_passed == YES) {
                 continue;
@@ -280,26 +295,16 @@
                  ABS(m_pre_point.y - tmp.m_coor.y)==1)||
                 (m_pre_point.y == tmp.m_coor.y&&
                  ABS(m_pre_point.x - tmp.m_coor.x)==1)) {
-                tmp.m_passed = YES;
-                //计算一根线
-                line.m_begin_pos = CGPointMake(BASE_X + m_pre_point.x*57, BASE_Y + m_pre_point.y*57);
-                line.m_end_pos = CGPointMake(BASE_X + tmp.m_coor.x*57, BASE_Y + tmp.m_coor.y*57);
-                [m_line_view.m_lines_arr addObject:line];
-                m_pre_point = tmp.m_coor;
-            }
+                    tmp.m_passed = YES;
+                    //计算一根线
+                    line.m_begin_pos = CGPointMake(BASE_X + m_pre_point.x*57*[GameState get_instance].m_ratio, BASE_Y + m_pre_point.y*57*[GameState get_instance].m_ratio);
+                    line.m_end_pos = CGPointMake(BASE_X + tmp.m_coor.x*57*[GameState get_instance].m_ratio, BASE_Y + tmp.m_coor.y*57*[GameState get_instance].m_ratio);
+                    [m_line_view.m_lines_arr addObject:line];
+                    m_pre_point = tmp.m_coor;
+                }
         }
     }
     [line release];
-    if (CGRectContainsPoint([m_end_block.m_sprite boundingBox], pos)&&
-        m_end_block.m_passed == YES) {
-        for (NSInteger i = 0; i < [m_block_arr count]; i++) {
-            GameBlock * tmp = [m_block_arr objectAtIndex:i];
-            if (!tmp.m_passed) {
-                return;
-            }
-        }
-        [self game_pass];
-    }
 }
 
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{

@@ -27,7 +27,6 @@
 }
 -(void)create_sprite:(NSString *)path{
     m_sprite = [CCSprite spriteWithFile:path];
-    m_sprite.scale = [GameState get_instance].m_scale;
 }
 
 -(void)set_sprite_pos:(CGPoint)pos{
