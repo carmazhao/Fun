@@ -73,17 +73,17 @@ static RoundSelectionData * m_inst;
         for (NSInteger j = 0; j < num_of_every_type; j++) {
             [m_data getBytes:&degree_of_game range:NSMakeRange(begin_index, sizeof(degree_of_game))];
             begin_index += sizeof(degree_of_game);
-            
+            //检查第一个关卡
+            if (i == 0 && j == 0 && degree_of_game == 0) {
+                degree_of_game = 1;
+            }
             //把data放到meta中
             NSNumber * tmp = [NSNumber numberWithUnsignedChar:degree_of_game];
             [meta_data.m_round_level_arr addObject:tmp];
         }
         [m_game_arr addObject:meta_data];
     }
-   /* for (NSInteger i = 0; i < [meta_data.m_check_point_arr count]; i++) {
-        NSInteger m = [(NSNumber*)[meta_data.m_round_level_arr objectAtIndex: i] intValue];
-        NSLog(@"%d" , (int)m);
-    }*/
+   
     [meta_data release];
     meta_data = nil;
     m_round_info_loaded = YES;
@@ -93,6 +93,38 @@ static RoundSelectionData * m_inst;
     NSInteger page_num = view_data.m_page_num;
     NSInteger game_num = view_data.m_game_index;
     //NSLog(@"%d , %d" , page_num , game_num);
+    NSNumber * game_value = [NSNumber numberWithInteger:value];
+    [((RoundSelectionMeta*)[m_game_arr objectAtIndex:page_num]).m_round_level_arr replaceObjectAtIndex:game_num withObject:game_value];
+    
+    [self write_to_file:page_num :game_num :value];
+    
+    //写入下三关开启
+    
+    for (NSInteger i = 0; i < 3; i++) {
+        game_num++;
+        //先得到下一关数据
+        if (game_num >= [((RoundSelectionMeta*)[m_game_arr objectAtIndex:page_num]).m_round_level_arr count]) {
+            game_num = 0;
+            page_num++;
+            //如果页数超出了的话 那么就不管了
+            if (page_num >= [m_game_arr count]) {
+                break;
+            }
+        }
+        
+        //先测试关卡是否被开启过了
+        NSNumber * old_val = [((RoundSelectionMeta*)[m_game_arr objectAtIndex:page_num]).m_round_level_arr objectAtIndex:game_num];
+        if ([old_val integerValue] != 0) {
+            continue;
+        }
+        //开启关卡
+        game_value = [NSNumber numberWithInt:1];
+        [((RoundSelectionMeta*)[m_game_arr objectAtIndex:page_num]).m_round_level_arr replaceObjectAtIndex:game_num withObject:game_value];
+        [self write_to_file:page_num :game_num :1];
+    }
+}
+
+-(void)write_to_file:(NSInteger)page_num:(NSInteger)game_num:(NSInteger)value{
     NSNumber * game_value = [NSNumber numberWithInteger:value];
     [((RoundSelectionMeta*)[m_game_arr objectAtIndex:page_num]).m_round_level_arr replaceObjectAtIndex:game_num withObject:game_value];
     
@@ -122,13 +154,13 @@ static RoundSelectionData * m_inst;
     
     //计算每个小方格
     begin_pos += game_num;
-    //NSLog(@"%d" , (int)sizeof(unsigned char));
+    
     //写入信息
     unsigned char char_value = value;
     NSString  *     path = [[NSBundle mainBundle]pathForResource:@"ini/game_ini" ofType:@""];
     m_data = [NSMutableData dataWithContentsOfFile:path];
     [m_data replaceBytesInRange:NSMakeRange(begin_pos, sizeof(unsigned char)) withBytes:&char_value length:sizeof(char_value)];
     [m_data writeToFile:path atomically:YES];
-}
 
+}
 @end

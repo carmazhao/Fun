@@ -80,15 +80,18 @@
     for (NSInteger i = 0; i < m_meta.m_game_num; i++) {
         switch ([(NSNumber *)[m_meta.m_round_level_arr objectAtIndex:i] intValue]) {
             case 0:
-                level_btn = [CCSprite spriteWithFile:@"pic/level0.png"];
+                level_btn = [CCSprite spriteWithFile:@"pic/forbidden.png"];
                 break;
             case 1:
-                level_btn = [CCSprite spriteWithFile:@"pic/level1.png"];
+                level_btn = [CCSprite spriteWithFile:@"pic/level0.png"];
                 break;
             case 2:
-                level_btn = [CCSprite spriteWithFile:@"pic/level2.png"];
+                level_btn = [CCSprite spriteWithFile:@"pic/level1.png"];
                 break;
             case 3:
+                level_btn = [CCSprite spriteWithFile:@"pic/level2.png"];
+                break;
+            case 4:
                 level_btn = [CCSprite spriteWithFile:@"pic/level3.png"];
                 break;
             default:
@@ -96,6 +99,8 @@
                 break;
         }
         level_btn.scale = [GameState get_instance].m_scale;
+        level_btn.tag = [(NSNumber *)[m_meta.m_round_level_arr objectAtIndex:i] intValue];
+        
        // level_btn.contentSize = CGSizeMake(level_btn.contentSize.width * [GameState get_instance].m_scale, level_btn.contentSize.height*[GameState get_instance].m_scale);
         line_num = i/5;
         colum_num = i%5;
@@ -138,6 +143,10 @@
     for (NSInteger i = 0; i < [m_level_arr count]; i++) {
         block = [m_level_arr objectAtIndex:i];
         if (CGRectContainsPoint([block boundingBox], pos)) {
+            //先检查本关卡开启了么
+            if (block.tag == 0) {
+                return;
+            }
             v_d = [[ViewData alloc]init];
             v_d.m_game_index = i;
             v_d.m_page_num = m_page_num;

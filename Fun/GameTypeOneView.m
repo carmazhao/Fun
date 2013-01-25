@@ -324,19 +324,19 @@
     switch (level) {
         case H_1_LIMIT:
         case H_1_SCORE:
-            score = 3;
+            score = 4;
             break;
         case H_2_LIMIT:
         case H_2_SCORE: 
-            score = 2;
+            score = 3;
             break;
         case H_3_LIMIT:
         case H_3_SCORE:
-            score = 1;
+            score =2;
             break;
         case H_4_LIMIT:
         case H_4_SCORE:
-            score = 0;
+            score = 1;
             break;
         default:
             break;
