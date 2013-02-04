@@ -7,10 +7,13 @@
 //
 
 #import "LineView.h"
+#import "GameState.h"
 
 
 @implementation LineView
 @synthesize m_lines_arr;
+@synthesize m_base_pos;
+
 -(LineView*)init{
     if ((self = [super init])) {
         m_lines_arr = [[NSMutableArray alloc]init];
@@ -23,7 +26,9 @@
     for (NSInteger i = 0; i < [m_lines_arr count]; i++) {
         line = [m_lines_arr objectAtIndex:i];
         glLineWidth(6);
-        ccDrawLine(line.m_begin_pos, line.m_end_pos);
+        CGPoint begin_pos = CGPointMake(m_base_pos.x + line.m_begin_pos.m_coor.x*57*[GameState get_instance].m_ratio, m_base_pos.y + line.m_begin_pos.m_coor.y*57*[GameState get_instance].m_ratio);
+        CGPoint end_pos = CGPointMake(m_base_pos.x + line.m_end_pos.m_coor.x*57*[GameState get_instance].m_ratio, m_base_pos.y + line.m_end_pos.m_coor.y*57*[GameState get_instance].m_ratio);
+        ccDrawLine(begin_pos, end_pos);
     }
 }
 
@@ -31,8 +36,22 @@
     [m_lines_arr addObject:line];
 }
 
+-(void)set_base_pos:(NSInteger)x :(NSInteger)y{
+    m_base_pos.x = x;
+    m_base_pos.y = y;
+}
+
+-(void)delete_lines_begin_by:(NSInteger)x:(NSInteger)y{
+    for (NSInteger i = 0; i < [m_lines_arr count]; i++) {
+        TraceLine * line = [m_lines_arr objectAtIndex:i];
+        if (line.m_begin_pos.m_coor.x == x &&
+            line.m_begin_pos.m_coor.y) {
+            [m_lines_arr removeObjectsInRange:NSMakeRange(i, [m_lines_arr count] - i)];
+        }
+    }
+}
 -(void)dealloc{
-    [super dealloc];
     [m_lines_arr release];
+    [super dealloc];
 }
 @end

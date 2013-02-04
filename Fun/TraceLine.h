@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GameBlock.h"
 
 @interface TraceLine : NSObject
-@property(nonatomic)CGPoint m_begin_pos;
-@property(nonatomic)CGPoint m_end_pos;
+@property(nonatomic , retain)GameBlock * m_begin_pos;
+@property(nonatomic , retain)GameBlock * m_end_pos;
 
 @end

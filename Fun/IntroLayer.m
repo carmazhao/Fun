@@ -92,23 +92,6 @@
     menu.position = CGPointMake(size.width/2, size.height/2);
     
     [self addChild:menu];
-
-    /*ScrollPageView * view = [ScrollPageView create_layer];
-    view.position = CGPointMake(0, 0);
-    [self addChild:view];
-    
-    
-    CCSprite * sprite1 = [CCSprite spriteWithFile:@"pic/level效果图.png"];
-    sprite1.scale = 0.5;
-    CCSprite * sprite2 = [CCSprite spriteWithFile:@"pic/level效果图.png"];
-    sprite2.scale = 0.5;
-    CCSprite * sprite3 = [CCSprite spriteWithFile:@"pic/level效果图.png"];
-    sprite3.scale = 0.5;
-    
-    [view set_page_width:sprite1.contentSize.width * sprite1.scale];
-    [view add_page_view:sprite1];
-    [view add_page_view:sprite2];
-    [view add_page_view:sprite3];*/
 }
 
 -(void)dealloc {

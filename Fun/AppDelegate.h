@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
+#import "AdSageView.h"
 
-@interface AppController : NSObject <UIApplicationDelegate, CCDirectorDelegate>
+@interface AppController : NSObject <UIApplicationDelegate, CCDirectorDelegate , AdSageDelegate>
 {
 	UIWindow *window_;
 	UINavigationController *navController_;

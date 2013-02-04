@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "IntroLayer.h"
 #import "GameState.h"
+#import <iAd/iAd.h>
 
 @implementation AppController
 
@@ -93,8 +94,15 @@
 	
 	// make main window visible
 	[window_ makeKeyAndVisible];
-	
+    AdSageView * adview = [AdSageView requestAdSageBannerAdView:self sizeType:AdSageBannerAdViewSize_320X50];
+    adview.frame = CGRectMake(0, [[CCDirector sharedDirector]winSize].height - 50, 320, 50);
+    [glView addSubview:adview];
+    
 	return YES;
+}
+/***********广告相关**********/
+-(UIViewController *)viewControllerForPresentingModalView {
+    return nil;
 }
 
 // Supported orientations: Landscape. Customize it for your own needs

@@ -54,13 +54,10 @@
     //创建关卡size栏
     CCSprite * size_label;
     NSInteger size_val = m_meta.m_game_size;
-    switch (size_val) {
-        case 5:
-            size_label = [CCSprite spriteWithFile:@"pic/5x5.png"];
-            break;
-        default:
-            break;
-    }
+    NSString * size_path = [NSString stringWithFormat:@"pic/%dx%d.png" , size_val , size_val];
+    
+    size_label = [CCSprite spriteWithFile:size_path];
+    
     if (size_label != nil) {
         size_label.scale = [GameState get_instance].m_scale;
         size_label.position = CGPointMake(77, 425);
@@ -145,12 +142,11 @@
         if (CGRectContainsPoint([block boundingBox], pos)) {
             //先检查本关卡开启了么
             if (block.tag == 0) {
-                return;
+                //return;
             }
             v_d = [[ViewData alloc]init];
             v_d.m_game_index = i;
             v_d.m_page_num = m_page_num;
-            NSLog(@"%d page number  " , m_page_num);
             //进入loading页面
             [[CCDirector sharedDirector]replaceScene:[LoadingView sceneWithType:LOAD_GAME_ROUND_INFO :v_d]];
             [v_d release];

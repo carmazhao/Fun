@@ -156,6 +156,120 @@
 		BDECD886168BDBB9009ADC71 /* GamePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BDECD885168BDBB9009ADC71 /* GamePoint.m */; };
 		BDECF3501678D08000637380 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDECF34F1678D08000637380 /* LoadingView.m */; };
 		BDEF4DA016918A3A00061A1D /* ScoreCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF4D9F16918A3A00061A1D /* ScoreCounter.m */; };
+		BDF908D816B7CD5300119B4A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF908D716B7CD5300119B4A /* StoreKit.framework */; };
+		BDF908DB16B7CEDF00119B4A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF908DA16B7CEDF00119B4A /* iAd.framework */; };
+		BDF908E416B7E07800119B4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF908E316B7E07800119B4A /* SystemConfiguration.framework */; };
+		BDF908E616B7E09D00119B4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF908E516B7E09C00119B4A /* CoreLocation.framework */; };
+		BDF908E816B7E0B500119B4A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF908E716B7E0B500119B4A /* CoreTelephony.framework */; };
+		BDF908EA16B7E0CE00119B4A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF908E916B7E0CE00119B4A /* MessageUI.framework */; };
+		BDF908EC16B7E0DA00119B4A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF908EB16B7E0DA00119B4A /* libz.dylib */; };
+		BDF9091516B7E72800119B4A /* AdSageAdapterAder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090616B7E72800119B4A /* AdSageAdapterAder.m */; };
+		BDF9091616B7E72800119B4A /* libAderSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9090716B7E72800119B4A /* libAderSDK.a */; };
+		BDF9091716B7E72800119B4A /* AdSageAdapterAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090A16B7E72800119B4A /* AdSageAdapterAdMob.m */; };
+		BDF9091816B7E72800119B4A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9091416B7E72800119B4A /* libGoogleAdMobAds.a */; };
+		BDF9091E16B7E77B00119B4A /* libMobiSageMediatorSDK_2.1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9091D16B7E77B00119B4A /* libMobiSageMediatorSDK_2.1.2.a */; };
+		BDF9098016B7E7A100119B4A /* libMobiSageMediatorSDK_2.1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9091F16B7E7A100119B4A /* libMobiSageMediatorSDK_2.1.2.a */; };
+		BDF9098116B7E7A100119B4A /* libMobiSageRecommend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9092016B7E7A100119B4A /* libMobiSageRecommend.a */; };
+		BDF9098216B7E7A100119B4A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092716B7E7A100119B4A /* JSONKit.m */; };
+		BDF9098316B7E7A100119B4A /* MobiSageRecommendBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BDF9092816B7E7A100119B4A /* MobiSageRecommendBundle.bundle */; };
+		BDF9098416B7E7A100119B4A /* MSKaixinAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093116B7E7A100119B4A /* MSKaixinAccessToken.m */; };
+		BDF9098516B7E7A100119B4A /* MSKaixinAuthorize.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093316B7E7A100119B4A /* MSKaixinAuthorize.m */; };
+		BDF9098616B7E7A100119B4A /* MSKaixinFriendsMe.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093616B7E7A100119B4A /* MSKaixinFriendsMe.m */; };
+		BDF9098716B7E7A100119B4A /* MSKaixinPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093816B7E7A100119B4A /* MSKaixinPackage.m */; };
+		BDF9098816B7E7A100119B4A /* MSKaixinPageAddFan.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093B16B7E7A100119B4A /* MSKaixinPageAddFan.m */; };
+		BDF9098916B7E7A100119B4A /* MSKaixinAlbumShow.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093E16B7E7A100119B4A /* MSKaixinAlbumShow.m */; };
+		BDF9098A16B7E7A100119B4A /* MSKaixinPhotoUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094016B7E7A100119B4A /* MSKaixinPhotoUpload.m */; };
+		BDF9098B16B7E7A100119B4A /* MSKaixinRecordsUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094316B7E7A100119B4A /* MSKaixinRecordsUpload.m */; };
+		BDF9098C16B7E7A100119B4A /* MSRenrenAuthorize.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094716B7E7A100119B4A /* MSRenrenAuthorize.m */; };
+		BDF9098D16B7E7A100119B4A /* MSRenrenToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094916B7E7A100119B4A /* MSRenrenToken.m */; };
+		BDF9098E16B7E7A100119B4A /* MSRenrenFriendsGetFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094C16B7E7A100119B4A /* MSRenrenFriendsGetFriends.m */; };
+		BDF9098F16B7E7A100119B4A /* MSRenrenPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094E16B7E7A100119B4A /* MSRenrenPackage.m */; };
+		BDF9099016B7E7A100119B4A /* MSRenrenPagesBecomeFan.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095116B7E7A100119B4A /* MSRenrenPagesBecomeFan.m */; };
+		BDF9099116B7E7A100119B4A /* MSRenrenPhotosGetAlbums.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095416B7E7A100119B4A /* MSRenrenPhotosGetAlbums.m */; };
+		BDF9099216B7E7A100119B4A /* MSRenrenPhototsUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095616B7E7A100119B4A /* MSRenrenPhototsUpload.m */; };
+		BDF9099316B7E7A100119B4A /* MSRenrenStatusSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095916B7E7A100119B4A /* MSRenrenStatusSet.m */; };
+		BDF9099416B7E7A100119B4A /* MSSinaAccountGetUID.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095D16B7E7A100119B4A /* MSSinaAccountGetUID.m */; };
+		BDF9099516B7E7A100119B4A /* MSSinaAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096016B7E7A100119B4A /* MSSinaAccessToken.m */; };
+		BDF9099616B7E7A100119B4A /* MSSinaFriendshipCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096316B7E7A100119B4A /* MSSinaFriendshipCreate.m */; };
+		BDF9099716B7E7A100119B4A /* MSSinaFriendshipsDestroy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096516B7E7A100119B4A /* MSSinaFriendshipsDestroy.m */; };
+		BDF9099816B7E7A100119B4A /* MSSinaFriendshipsFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096716B7E7A100119B4A /* MSSinaFriendshipsFriends.m */; };
+		BDF9099916B7E7A100119B4A /* MSSinaWeiboPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096916B7E7A100119B4A /* MSSinaWeiboPackage.m */; };
+		BDF9099A16B7E7A100119B4A /* MSSinaStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096C16B7E7A100119B4A /* MSSinaStatusUpdate.m */; };
+		BDF9099B16B7E7A100119B4A /* MSSinaStatusUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096E16B7E7A100119B4A /* MSSinaStatusUpload.m */; };
+		BDF9099C16B7E7A100119B4A /* MSSinaUserShow.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097116B7E7A100119B4A /* MSSinaUserShow.m */; };
+		BDF9099D16B7E7A100119B4A /* MSTencentAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097516B7E7A100119B4A /* MSTencentAccessToken.m */; };
+		BDF9099E16B7E7A100119B4A /* MSTencentFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097816B7E7A100119B4A /* MSTencentFriends.m */; };
+		BDF9099F16B7E7A100119B4A /* MSTencentWeiboPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097A16B7E7A100119B4A /* MSTencentWeiboPackage.m */; };
+		BDF909A016B7E7A100119B4A /* MSTencentPicWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097D16B7E7A100119B4A /* MSTencentPicWeibo.m */; };
+		BDF909A116B7E7A100119B4A /* MSTencentWeiboAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097F16B7E7A100119B4A /* MSTencentWeiboAdd.m */; };
+		BDF909A316B7FB4300119B4A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909A216B7FB4300119B4A /* AdSupport.framework */; };
+		BDF909A516B7FB4D00119B4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909A416B7FB4D00119B4A /* CoreData.framework */; };
+		BDF909A616B7FCCB00119B4A /* AdSageAdapter.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092216B7E7A100119B4A /* AdSageAdapter.h */; };
+		BDF909A716B7FCCB00119B4A /* AdSageDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092316B7E7A100119B4A /* AdSageDelegate.h */; };
+		BDF909A816B7FCCB00119B4A /* AdSageManager.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092416B7E7A100119B4A /* AdSageManager.h */; };
+		BDF909A916B7FCCB00119B4A /* AdSageView.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092516B7E7A100119B4A /* AdSageView.h */; };
+		BDF909AA16B7FCCB00119B4A /* JSONKit.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092616B7E7A100119B4A /* JSONKit.h */; };
+		BDF909AB16B7FCCB00119B4A /* MobiSageRecommendSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092916B7E7A100119B4A /* MobiSageRecommendSDK.h */; };
+		BDF909AC16B7FCCB00119B4A /* MobiSageSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092A16B7E7A100119B4A /* MobiSageSDK.h */; };
+		BDF909AD16B7FCCB00119B4A /* MobiSageSNSPackage.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092D16B7E7A100119B4A /* MobiSageSNSPackage.h */; };
+		BDF909AE16B7FCCB00119B4A /* MSKaixinAccessToken.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093016B7E7A100119B4A /* MSKaixinAccessToken.h */; };
+		BDF909AF16B7FCCB00119B4A /* MSKaixinAuthorize.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093216B7E7A100119B4A /* MSKaixinAuthorize.h */; };
+		BDF909B016B7FCCB00119B4A /* MSKaixinFriendsMe.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093516B7E7A100119B4A /* MSKaixinFriendsMe.h */; };
+		BDF909B116B7FCCB00119B4A /* MSKaixinPackage.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093716B7E7A100119B4A /* MSKaixinPackage.h */; };
+		BDF909B216B7FCCB00119B4A /* MSKaixinPageAddFan.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093A16B7E7A100119B4A /* MSKaixinPageAddFan.h */; };
+		BDF909B316B7FCCB00119B4A /* MSKaixinAlbumShow.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093D16B7E7A100119B4A /* MSKaixinAlbumShow.h */; };
+		BDF909B416B7FCCB00119B4A /* MSKaixinPhotoUpload.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9093F16B7E7A100119B4A /* MSKaixinPhotoUpload.h */; };
+		BDF909B516B7FCCC00119B4A /* MSKaixinRecordsUpload.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094216B7E7A100119B4A /* MSKaixinRecordsUpload.h */; };
+		BDF909B616B7FCCC00119B4A /* MSRenrenAuthorize.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094616B7E7A100119B4A /* MSRenrenAuthorize.h */; };
+		BDF909B716B7FCCC00119B4A /* MSRenrenToken.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094816B7E7A100119B4A /* MSRenrenToken.h */; };
+		BDF909B816B7FCCC00119B4A /* MSRenrenFriendsGetFriends.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094B16B7E7A100119B4A /* MSRenrenFriendsGetFriends.h */; };
+		BDF909B916B7FCCC00119B4A /* MSRenrenPackage.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9094D16B7E7A100119B4A /* MSRenrenPackage.h */; };
+		BDF909BA16B7FCCC00119B4A /* MSRenrenPagesBecomeFan.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095016B7E7A100119B4A /* MSRenrenPagesBecomeFan.h */; };
+		BDF909BB16B7FCCC00119B4A /* MSRenrenPhotosGetAlbums.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095316B7E7A100119B4A /* MSRenrenPhotosGetAlbums.h */; };
+		BDF909BC16B7FCCC00119B4A /* MSRenrenPhototsUpload.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095516B7E7A100119B4A /* MSRenrenPhototsUpload.h */; };
+		BDF909BD16B7FCCC00119B4A /* MSRenrenStatusSet.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095816B7E7A100119B4A /* MSRenrenStatusSet.h */; };
+		BDF909BE16B7FCCC00119B4A /* MSSinaAccountGetUID.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095C16B7E7A100119B4A /* MSSinaAccountGetUID.h */; };
+		BDF909BF16B7FCCC00119B4A /* MSSinaAccessToken.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9095F16B7E7A100119B4A /* MSSinaAccessToken.h */; };
+		BDF909C016B7FCCC00119B4A /* MSSinaFriendshipCreate.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096216B7E7A100119B4A /* MSSinaFriendshipCreate.h */; };
+		BDF909C116B7FCCC00119B4A /* MSSinaFriendshipsDestroy.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096416B7E7A100119B4A /* MSSinaFriendshipsDestroy.h */; };
+		BDF909C216B7FCCC00119B4A /* MSSinaFriendshipsFriends.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096616B7E7A100119B4A /* MSSinaFriendshipsFriends.h */; };
+		BDF909C316B7FCCC00119B4A /* MSSinaWeiboPackage.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096816B7E7A100119B4A /* MSSinaWeiboPackage.h */; };
+		BDF909C416B7FCCC00119B4A /* MSSinaStatusUpdate.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096B16B7E7A100119B4A /* MSSinaStatusUpdate.h */; };
+		BDF909C516B7FCCC00119B4A /* MSSinaStatusUpload.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9096D16B7E7A100119B4A /* MSSinaStatusUpload.h */; };
+		BDF909C616B7FCCC00119B4A /* MSSinaUserShow.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097016B7E7A100119B4A /* MSSinaUserShow.h */; };
+		BDF909C716B7FCCC00119B4A /* MSTencentAccessToken.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097416B7E7A100119B4A /* MSTencentAccessToken.h */; };
+		BDF909C816B7FCCC00119B4A /* MSTencentFriends.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097716B7E7A100119B4A /* MSTencentFriends.h */; };
+		BDF909C916B7FCCC00119B4A /* MSTencentWeiboPackage.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097916B7E7A100119B4A /* MSTencentWeiboPackage.h */; };
+		BDF909CA16B7FCCC00119B4A /* MSTencentPicWeibo.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097C16B7E7A100119B4A /* MSTencentPicWeibo.h */; };
+		BDF909CB16B7FCCC00119B4A /* MSTencentWeiboAdd.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9097E16B7E7A100119B4A /* MSTencentWeiboAdd.h */; };
+		BDF909CC16B7FD0900119B4A /* libMobiSageMediatorSDK_2.1.2.a in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091F16B7E7A100119B4A /* libMobiSageMediatorSDK_2.1.2.a */; };
+		BDF909CD16B7FD0900119B4A /* libMobiSageRecommend.a in Sources */ = {isa = PBXBuildFile; fileRef = BDF9092016B7E7A100119B4A /* libMobiSageRecommend.a */; };
+		BDF909CE16B7FD0900119B4A /* libMobiSageMediatorSDK_2.1.2.a in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091D16B7E77B00119B4A /* libMobiSageMediatorSDK_2.1.2.a */; };
+		BDF909CF16B7FD0900119B4A /* AdSageAdapter.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091916B7E76500119B4A /* AdSageAdapter.h */; };
+		BDF909D016B7FD0900119B4A /* AdSageDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091A16B7E76500119B4A /* AdSageDelegate.h */; };
+		BDF909D116B7FD0900119B4A /* AdSageManager.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091B16B7E76500119B4A /* AdSageManager.h */; };
+		BDF909D216B7FD0900119B4A /* AdSageView.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091C16B7E76500119B4A /* AdSageView.h */; };
+		BDF909D316B7FD0900119B4A /* AderDelegateProtocal.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090316B7E72800119B4A /* AderDelegateProtocal.h */; };
+		BDF909D416B7FD0900119B4A /* AderSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090416B7E72800119B4A /* AderSDK.h */; };
+		BDF909D516B7FD0900119B4A /* libAderSDK.a in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090716B7E72800119B4A /* libAderSDK.a */; };
+		BDF909D616B7FD0900119B4A /* AdSageAdapterAder.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090516B7E72800119B4A /* AdSageAdapterAder.h */; };
+		BDF909D716B7FD0900119B4A /* AdSageAdapterAdMob.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090916B7E72800119B4A /* AdSageAdapterAdMob.h */; };
+		BDF909D816B7FD0900119B4A /* GADAdMobExtras.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090B16B7E72800119B4A /* GADAdMobExtras.h */; };
+		BDF909D916B7FD0900119B4A /* GADAdNetworkExtras.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090C16B7E72800119B4A /* GADAdNetworkExtras.h */; };
+		BDF909DA16B7FD0900119B4A /* GADAdSize.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090D16B7E72800119B4A /* GADAdSize.h */; };
+		BDF909DB16B7FD0900119B4A /* GADBannerView.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090E16B7E72800119B4A /* GADBannerView.h */; };
+		BDF909DC16B7FD0900119B4A /* GADBannerViewDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9090F16B7E72800119B4A /* GADBannerViewDelegate.h */; };
+		BDF909DD16B7FD0900119B4A /* GADInterstitial.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091016B7E72800119B4A /* GADInterstitial.h */; };
+		BDF909DE16B7FD0900119B4A /* GADInterstitialDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091116B7E72800119B4A /* GADInterstitialDelegate.h */; };
+		BDF909DF16B7FD0900119B4A /* GADRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091216B7E72800119B4A /* GADRequest.h */; };
+		BDF909E016B7FD0900119B4A /* GADRequestError.h in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091316B7E72800119B4A /* GADRequestError.h */; };
+		BDF909E116B7FD0900119B4A /* libGoogleAdMobAds.a in Sources */ = {isa = PBXBuildFile; fileRef = BDF9091416B7E72800119B4A /* libGoogleAdMobAds.a */; };
+		BDF909E616B7FEAD00119B4A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909E516B7FEAD00119B4A /* libGoogleAdMobAds.a */; };
+		BDF909E816B7FECE00119B4A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909E716B7FECE00119B4A /* CoreMotion.framework */; };
+		BDF909EA16B7FEE400119B4A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909E916B7FEE400119B4A /* CoreMedia.framework */; };
+		BDF909EC16B7FF4400119B4A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909EB16B7FF4400119B4A /* EventKit.framework */; };
+		BDF909EE16B7FF4C00119B4A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909ED16B7FF4C00119B4A /* EventKitUI.framework */; };
+		BDF909F016B7FFA800119B4A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF909EF16B7FFA800119B4A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -467,6 +581,115 @@
 		BDECF34F1678D08000637380 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		BDEF4D9E16918A3A00061A1D /* ScoreCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCounter.h; sourceTree = "<group>"; };
 		BDEF4D9F16918A3A00061A1D /* ScoreCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCounter.m; sourceTree = "<group>"; };
+		BDF908D716B7CD5300119B4A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BDF908DA16B7CEDF00119B4A /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		BDF908E316B7E07800119B4A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BDF908E516B7E09C00119B4A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BDF908E716B7E0B500119B4A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BDF908E916B7E0CE00119B4A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BDF908EB16B7E0DA00119B4A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BDF9090316B7E72800119B4A /* AderDelegateProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AderDelegateProtocal.h; sourceTree = "<group>"; };
+		BDF9090416B7E72800119B4A /* AderSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AderSDK.h; sourceTree = "<group>"; };
+		BDF9090516B7E72800119B4A /* AdSageAdapterAder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageAdapterAder.h; sourceTree = "<group>"; };
+		BDF9090616B7E72800119B4A /* AdSageAdapterAder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdSageAdapterAder.m; sourceTree = "<group>"; };
+		BDF9090716B7E72800119B4A /* libAderSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAderSDK.a; sourceTree = "<group>"; };
+		BDF9090916B7E72800119B4A /* AdSageAdapterAdMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageAdapterAdMob.h; sourceTree = "<group>"; };
+		BDF9090A16B7E72800119B4A /* AdSageAdapterAdMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdSageAdapterAdMob.m; sourceTree = "<group>"; };
+		BDF9090B16B7E72800119B4A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		BDF9090C16B7E72800119B4A /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		BDF9090D16B7E72800119B4A /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		BDF9090E16B7E72800119B4A /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		BDF9090F16B7E72800119B4A /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		BDF9091016B7E72800119B4A /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		BDF9091116B7E72800119B4A /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		BDF9091216B7E72800119B4A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		BDF9091316B7E72800119B4A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		BDF9091416B7E72800119B4A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		BDF9091916B7E76500119B4A /* AdSageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageAdapter.h; sourceTree = "<group>"; };
+		BDF9091A16B7E76500119B4A /* AdSageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageDelegate.h; sourceTree = "<group>"; };
+		BDF9091B16B7E76500119B4A /* AdSageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageManager.h; sourceTree = "<group>"; };
+		BDF9091C16B7E76500119B4A /* AdSageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageView.h; sourceTree = "<group>"; };
+		BDF9091D16B7E77B00119B4A /* libMobiSageMediatorSDK_2.1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobiSageMediatorSDK_2.1.2.a; sourceTree = "<group>"; };
+		BDF9091F16B7E7A100119B4A /* libMobiSageMediatorSDK_2.1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobiSageMediatorSDK_2.1.2.a; path = AdSage_iOS_SDK/libMobiSageMediatorSDK_2.1.2.a; sourceTree = "<group>"; };
+		BDF9092016B7E7A100119B4A /* libMobiSageRecommend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobiSageRecommend.a; path = AdSage_iOS_SDK/libMobiSageRecommend.a; sourceTree = "<group>"; };
+		BDF9092216B7E7A100119B4A /* AdSageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageAdapter.h; sourceTree = "<group>"; };
+		BDF9092316B7E7A100119B4A /* AdSageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageDelegate.h; sourceTree = "<group>"; };
+		BDF9092416B7E7A100119B4A /* AdSageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageManager.h; sourceTree = "<group>"; };
+		BDF9092516B7E7A100119B4A /* AdSageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageView.h; sourceTree = "<group>"; };
+		BDF9092616B7E7A100119B4A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		BDF9092716B7E7A100119B4A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		BDF9092816B7E7A100119B4A /* MobiSageRecommendBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobiSageRecommendBundle.bundle; sourceTree = "<group>"; };
+		BDF9092916B7E7A100119B4A /* MobiSageRecommendSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobiSageRecommendSDK.h; sourceTree = "<group>"; };
+		BDF9092A16B7E7A100119B4A /* MobiSageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobiSageSDK.h; sourceTree = "<group>"; };
+		BDF9092D16B7E7A100119B4A /* MobiSageSNSPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobiSageSNSPackage.h; sourceTree = "<group>"; };
+		BDF9093016B7E7A100119B4A /* MSKaixinAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinAccessToken.h; sourceTree = "<group>"; };
+		BDF9093116B7E7A100119B4A /* MSKaixinAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinAccessToken.m; sourceTree = "<group>"; };
+		BDF9093216B7E7A100119B4A /* MSKaixinAuthorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinAuthorize.h; sourceTree = "<group>"; };
+		BDF9093316B7E7A100119B4A /* MSKaixinAuthorize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinAuthorize.m; sourceTree = "<group>"; };
+		BDF9093516B7E7A100119B4A /* MSKaixinFriendsMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinFriendsMe.h; sourceTree = "<group>"; };
+		BDF9093616B7E7A100119B4A /* MSKaixinFriendsMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinFriendsMe.m; sourceTree = "<group>"; };
+		BDF9093716B7E7A100119B4A /* MSKaixinPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinPackage.h; sourceTree = "<group>"; };
+		BDF9093816B7E7A100119B4A /* MSKaixinPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinPackage.m; sourceTree = "<group>"; };
+		BDF9093A16B7E7A100119B4A /* MSKaixinPageAddFan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinPageAddFan.h; sourceTree = "<group>"; };
+		BDF9093B16B7E7A100119B4A /* MSKaixinPageAddFan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinPageAddFan.m; sourceTree = "<group>"; };
+		BDF9093D16B7E7A100119B4A /* MSKaixinAlbumShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinAlbumShow.h; sourceTree = "<group>"; };
+		BDF9093E16B7E7A100119B4A /* MSKaixinAlbumShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinAlbumShow.m; sourceTree = "<group>"; };
+		BDF9093F16B7E7A100119B4A /* MSKaixinPhotoUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinPhotoUpload.h; sourceTree = "<group>"; };
+		BDF9094016B7E7A100119B4A /* MSKaixinPhotoUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinPhotoUpload.m; sourceTree = "<group>"; };
+		BDF9094216B7E7A100119B4A /* MSKaixinRecordsUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKaixinRecordsUpload.h; sourceTree = "<group>"; };
+		BDF9094316B7E7A100119B4A /* MSKaixinRecordsUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKaixinRecordsUpload.m; sourceTree = "<group>"; };
+		BDF9094616B7E7A100119B4A /* MSRenrenAuthorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenAuthorize.h; sourceTree = "<group>"; };
+		BDF9094716B7E7A100119B4A /* MSRenrenAuthorize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenAuthorize.m; sourceTree = "<group>"; };
+		BDF9094816B7E7A100119B4A /* MSRenrenToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenToken.h; sourceTree = "<group>"; };
+		BDF9094916B7E7A100119B4A /* MSRenrenToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenToken.m; sourceTree = "<group>"; };
+		BDF9094B16B7E7A100119B4A /* MSRenrenFriendsGetFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenFriendsGetFriends.h; sourceTree = "<group>"; };
+		BDF9094C16B7E7A100119B4A /* MSRenrenFriendsGetFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenFriendsGetFriends.m; sourceTree = "<group>"; };
+		BDF9094D16B7E7A100119B4A /* MSRenrenPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenPackage.h; sourceTree = "<group>"; };
+		BDF9094E16B7E7A100119B4A /* MSRenrenPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenPackage.m; sourceTree = "<group>"; };
+		BDF9095016B7E7A100119B4A /* MSRenrenPagesBecomeFan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenPagesBecomeFan.h; sourceTree = "<group>"; };
+		BDF9095116B7E7A100119B4A /* MSRenrenPagesBecomeFan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenPagesBecomeFan.m; sourceTree = "<group>"; };
+		BDF9095316B7E7A100119B4A /* MSRenrenPhotosGetAlbums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenPhotosGetAlbums.h; sourceTree = "<group>"; };
+		BDF9095416B7E7A100119B4A /* MSRenrenPhotosGetAlbums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenPhotosGetAlbums.m; sourceTree = "<group>"; };
+		BDF9095516B7E7A100119B4A /* MSRenrenPhototsUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenPhototsUpload.h; sourceTree = "<group>"; };
+		BDF9095616B7E7A100119B4A /* MSRenrenPhototsUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenPhototsUpload.m; sourceTree = "<group>"; };
+		BDF9095816B7E7A100119B4A /* MSRenrenStatusSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRenrenStatusSet.h; sourceTree = "<group>"; };
+		BDF9095916B7E7A100119B4A /* MSRenrenStatusSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRenrenStatusSet.m; sourceTree = "<group>"; };
+		BDF9095C16B7E7A100119B4A /* MSSinaAccountGetUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaAccountGetUID.h; sourceTree = "<group>"; };
+		BDF9095D16B7E7A100119B4A /* MSSinaAccountGetUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaAccountGetUID.m; sourceTree = "<group>"; };
+		BDF9095F16B7E7A100119B4A /* MSSinaAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaAccessToken.h; sourceTree = "<group>"; };
+		BDF9096016B7E7A100119B4A /* MSSinaAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaAccessToken.m; sourceTree = "<group>"; };
+		BDF9096216B7E7A100119B4A /* MSSinaFriendshipCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaFriendshipCreate.h; sourceTree = "<group>"; };
+		BDF9096316B7E7A100119B4A /* MSSinaFriendshipCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaFriendshipCreate.m; sourceTree = "<group>"; };
+		BDF9096416B7E7A100119B4A /* MSSinaFriendshipsDestroy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaFriendshipsDestroy.h; sourceTree = "<group>"; };
+		BDF9096516B7E7A100119B4A /* MSSinaFriendshipsDestroy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaFriendshipsDestroy.m; sourceTree = "<group>"; };
+		BDF9096616B7E7A100119B4A /* MSSinaFriendshipsFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaFriendshipsFriends.h; sourceTree = "<group>"; };
+		BDF9096716B7E7A100119B4A /* MSSinaFriendshipsFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaFriendshipsFriends.m; sourceTree = "<group>"; };
+		BDF9096816B7E7A100119B4A /* MSSinaWeiboPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaWeiboPackage.h; sourceTree = "<group>"; };
+		BDF9096916B7E7A100119B4A /* MSSinaWeiboPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaWeiboPackage.m; sourceTree = "<group>"; };
+		BDF9096B16B7E7A100119B4A /* MSSinaStatusUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaStatusUpdate.h; sourceTree = "<group>"; };
+		BDF9096C16B7E7A100119B4A /* MSSinaStatusUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaStatusUpdate.m; sourceTree = "<group>"; };
+		BDF9096D16B7E7A100119B4A /* MSSinaStatusUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaStatusUpload.h; sourceTree = "<group>"; };
+		BDF9096E16B7E7A100119B4A /* MSSinaStatusUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaStatusUpload.m; sourceTree = "<group>"; };
+		BDF9097016B7E7A100119B4A /* MSSinaUserShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSinaUserShow.h; sourceTree = "<group>"; };
+		BDF9097116B7E7A100119B4A /* MSSinaUserShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSinaUserShow.m; sourceTree = "<group>"; };
+		BDF9097416B7E7A100119B4A /* MSTencentAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTencentAccessToken.h; sourceTree = "<group>"; };
+		BDF9097516B7E7A100119B4A /* MSTencentAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTencentAccessToken.m; sourceTree = "<group>"; };
+		BDF9097716B7E7A100119B4A /* MSTencentFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTencentFriends.h; sourceTree = "<group>"; };
+		BDF9097816B7E7A100119B4A /* MSTencentFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTencentFriends.m; sourceTree = "<group>"; };
+		BDF9097916B7E7A100119B4A /* MSTencentWeiboPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTencentWeiboPackage.h; sourceTree = "<group>"; };
+		BDF9097A16B7E7A100119B4A /* MSTencentWeiboPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTencentWeiboPackage.m; sourceTree = "<group>"; };
+		BDF9097C16B7E7A100119B4A /* MSTencentPicWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTencentPicWeibo.h; sourceTree = "<group>"; };
+		BDF9097D16B7E7A100119B4A /* MSTencentPicWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTencentPicWeibo.m; sourceTree = "<group>"; };
+		BDF9097E16B7E7A100119B4A /* MSTencentWeiboAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTencentWeiboAdd.h; sourceTree = "<group>"; };
+		BDF9097F16B7E7A100119B4A /* MSTencentWeiboAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTencentWeiboAdd.m; sourceTree = "<group>"; };
+		BDF909A216B7FB4300119B4A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BDF909A416B7FB4D00119B4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BDF909E516B7FEAD00119B4A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = AdSage_iOS_SDK/libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		BDF909E716B7FECE00119B4A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		BDF909E916B7FEE400119B4A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BDF909EB16B7FF4400119B4A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		BDF909ED16B7FF4C00119B4A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		BDF909EF16B7FFA800119B4A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +697,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF909F016B7FFA800119B4A /* MapKit.framework in Frameworks */,
+				BDF909EE16B7FF4C00119B4A /* EventKitUI.framework in Frameworks */,
+				BDF909EC16B7FF4400119B4A /* EventKit.framework in Frameworks */,
+				BDF909EA16B7FEE400119B4A /* CoreMedia.framework in Frameworks */,
+				BDF909E816B7FECE00119B4A /* CoreMotion.framework in Frameworks */,
+				BDF908E616B7E09D00119B4A /* CoreLocation.framework in Frameworks */,
+				BDF909A516B7FB4D00119B4A /* CoreData.framework in Frameworks */,
+				BDF909A316B7FB4300119B4A /* AdSupport.framework in Frameworks */,
+				BDF908D816B7CD5300119B4A /* StoreKit.framework in Frameworks */,
+				BDF908EC16B7E0DA00119B4A /* libz.dylib in Frameworks */,
+				BDF908EA16B7E0CE00119B4A /* MessageUI.framework in Frameworks */,
+				BD440A3C167761C800E8F4A5 /* CoreGraphics.framework in Frameworks */,
+				BDF908E816B7E0B500119B4A /* CoreTelephony.framework in Frameworks */,
+				BDF908E416B7E07800119B4A /* SystemConfiguration.framework in Frameworks */,
+				BDF908DB16B7CEDF00119B4A /* iAd.framework in Frameworks */,
 				BD440A2E167761C800E8F4A5 /* QuartzCore.framework in Frameworks */,
 				BD440A30167761C800E8F4A5 /* OpenGLES.framework in Frameworks */,
 				BD440A32167761C800E8F4A5 /* OpenAL.framework in Frameworks */,
@@ -481,8 +719,13 @@
 				BD440A36167761C800E8F4A5 /* AVFoundation.framework in Frameworks */,
 				BD440A38167761C800E8F4A5 /* UIKit.framework in Frameworks */,
 				BD440A3A167761C800E8F4A5 /* Foundation.framework in Frameworks */,
-				BD440A3C167761C800E8F4A5 /* CoreGraphics.framework in Frameworks */,
 				BD440A3E167761C800E8F4A5 /* GameKit.framework in Frameworks */,
+				BDF9091616B7E72800119B4A /* libAderSDK.a in Frameworks */,
+				BDF9091816B7E72800119B4A /* libGoogleAdMobAds.a in Frameworks */,
+				BDF9091E16B7E77B00119B4A /* libMobiSageMediatorSDK_2.1.2.a in Frameworks */,
+				BDF9098016B7E7A100119B4A /* libMobiSageMediatorSDK_2.1.2.a in Frameworks */,
+				BDF9098116B7E7A100119B4A /* libMobiSageRecommend.a in Frameworks */,
+				BDF909E616B7FEAD00119B4A /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +735,7 @@
 		BD440A1E167761C800E8F4A5 = {
 			isa = PBXGroup;
 			children = (
+				BDF909EF16B7FFA800119B4A /* MapKit.framework */,
 				BD440A3F167761C800E8F4A5 /* Fun */,
 				BD440A2C167761C800E8F4A5 /* Frameworks */,
 				BD440A2A167761C800E8F4A5 /* Products */,
@@ -509,6 +753,19 @@
 		BD440A2C167761C800E8F4A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDF909ED16B7FF4C00119B4A /* EventKitUI.framework */,
+				BDF909EB16B7FF4400119B4A /* EventKit.framework */,
+				BDF909E916B7FEE400119B4A /* CoreMedia.framework */,
+				BDF909E716B7FECE00119B4A /* CoreMotion.framework */,
+				BDF909A416B7FB4D00119B4A /* CoreData.framework */,
+				BDF909A216B7FB4300119B4A /* AdSupport.framework */,
+				BDF908EB16B7E0DA00119B4A /* libz.dylib */,
+				BDF908E916B7E0CE00119B4A /* MessageUI.framework */,
+				BDF908E716B7E0B500119B4A /* CoreTelephony.framework */,
+				BDF908E516B7E09C00119B4A /* CoreLocation.framework */,
+				BDF908E316B7E07800119B4A /* SystemConfiguration.framework */,
+				BDF908DA16B7CEDF00119B4A /* iAd.framework */,
+				BDF908D716B7CD5300119B4A /* StoreKit.framework */,
 				BD440A2D167761C800E8F4A5 /* QuartzCore.framework */,
 				BD440A2F167761C800E8F4A5 /* OpenGLES.framework */,
 				BD440A31167761C800E8F4A5 /* OpenAL.framework */,
@@ -564,6 +821,7 @@
 		BD440A5A167761C800E8F4A5 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				BDF908DC16B7DF9B00119B4A /* Ad */,
 				BD440B71167761C900E8F4A5 /* LICENSE_cocos2d.txt */,
 				BD440B80167761C900E8F4A5 /* LICENSE_CocosDenshion.txt */,
 				BD440BB2167761CA00E8F4A5 /* LICENSE_Kazmath.txt */,
@@ -1035,6 +1293,335 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		BDF908DC16B7DF9B00119B4A /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				BDF909E516B7FEAD00119B4A /* libGoogleAdMobAds.a */,
+				BDF9091F16B7E7A100119B4A /* libMobiSageMediatorSDK_2.1.2.a */,
+				BDF9092016B7E7A100119B4A /* libMobiSageRecommend.a */,
+				BDF9092116B7E7A100119B4A /* Public File */,
+				BDF9092B16B7E7A100119B4A /* SNS */,
+				BDF9091D16B7E77B00119B4A /* libMobiSageMediatorSDK_2.1.2.a */,
+				BDF9091916B7E76500119B4A /* AdSageAdapter.h */,
+				BDF9091A16B7E76500119B4A /* AdSageDelegate.h */,
+				BDF9091B16B7E76500119B4A /* AdSageManager.h */,
+				BDF9091C16B7E76500119B4A /* AdSageView.h */,
+				BDF9090116B7E72800119B4A /* Adapter File */,
+			);
+			name = Ad;
+			sourceTree = "<group>";
+		};
+		BDF9090116B7E72800119B4A /* Adapter File */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9090216B7E72800119B4A /* Ader */,
+				BDF9090816B7E72800119B4A /* AdMob */,
+			);
+			name = "Adapter File";
+			path = "AdSage_iOS_SDK/Adapter File";
+			sourceTree = "<group>";
+		};
+		BDF9090216B7E72800119B4A /* Ader */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9090316B7E72800119B4A /* AderDelegateProtocal.h */,
+				BDF9090416B7E72800119B4A /* AderSDK.h */,
+				BDF9090716B7E72800119B4A /* libAderSDK.a */,
+				BDF9090516B7E72800119B4A /* AdSageAdapterAder.h */,
+				BDF9090616B7E72800119B4A /* AdSageAdapterAder.m */,
+			);
+			path = Ader;
+			sourceTree = "<group>";
+		};
+		BDF9090816B7E72800119B4A /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9090916B7E72800119B4A /* AdSageAdapterAdMob.h */,
+				BDF9090A16B7E72800119B4A /* AdSageAdapterAdMob.m */,
+				BDF9090B16B7E72800119B4A /* GADAdMobExtras.h */,
+				BDF9090C16B7E72800119B4A /* GADAdNetworkExtras.h */,
+				BDF9090D16B7E72800119B4A /* GADAdSize.h */,
+				BDF9090E16B7E72800119B4A /* GADBannerView.h */,
+				BDF9090F16B7E72800119B4A /* GADBannerViewDelegate.h */,
+				BDF9091016B7E72800119B4A /* GADInterstitial.h */,
+				BDF9091116B7E72800119B4A /* GADInterstitialDelegate.h */,
+				BDF9091216B7E72800119B4A /* GADRequest.h */,
+				BDF9091316B7E72800119B4A /* GADRequestError.h */,
+				BDF9091416B7E72800119B4A /* libGoogleAdMobAds.a */,
+			);
+			path = AdMob;
+			sourceTree = "<group>";
+		};
+		BDF9092116B7E7A100119B4A /* Public File */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9092216B7E7A100119B4A /* AdSageAdapter.h */,
+				BDF9092316B7E7A100119B4A /* AdSageDelegate.h */,
+				BDF9092416B7E7A100119B4A /* AdSageManager.h */,
+				BDF9092516B7E7A100119B4A /* AdSageView.h */,
+				BDF9092616B7E7A100119B4A /* JSONKit.h */,
+				BDF9092716B7E7A100119B4A /* JSONKit.m */,
+				BDF9092816B7E7A100119B4A /* MobiSageRecommendBundle.bundle */,
+				BDF9092916B7E7A100119B4A /* MobiSageRecommendSDK.h */,
+				BDF9092A16B7E7A100119B4A /* MobiSageSDK.h */,
+			);
+			name = "Public File";
+			path = "AdSage_iOS_SDK/Public File";
+			sourceTree = "<group>";
+		};
+		BDF9092B16B7E7A100119B4A /* SNS */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9092C16B7E7A100119B4A /* Common */,
+				BDF9092E16B7E7A100119B4A /* Kaixin */,
+				BDF9094416B7E7A100119B4A /* Renren */,
+				BDF9095A16B7E7A100119B4A /* Sina */,
+				BDF9097216B7E7A100119B4A /* Tencent */,
+			);
+			name = SNS;
+			path = AdSage_iOS_SDK/SNS;
+			sourceTree = "<group>";
+		};
+		BDF9092C16B7E7A100119B4A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9092D16B7E7A100119B4A /* MobiSageSNSPackage.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BDF9092E16B7E7A100119B4A /* Kaixin */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9092F16B7E7A100119B4A /* Authorize */,
+				BDF9093416B7E7A100119B4A /* Friends */,
+				BDF9093716B7E7A100119B4A /* MSKaixinPackage.h */,
+				BDF9093816B7E7A100119B4A /* MSKaixinPackage.m */,
+				BDF9093916B7E7A100119B4A /* Pages */,
+				BDF9093C16B7E7A100119B4A /* Photos */,
+				BDF9094116B7E7A100119B4A /* Records */,
+			);
+			path = Kaixin;
+			sourceTree = "<group>";
+		};
+		BDF9092F16B7E7A100119B4A /* Authorize */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9093016B7E7A100119B4A /* MSKaixinAccessToken.h */,
+				BDF9093116B7E7A100119B4A /* MSKaixinAccessToken.m */,
+				BDF9093216B7E7A100119B4A /* MSKaixinAuthorize.h */,
+				BDF9093316B7E7A100119B4A /* MSKaixinAuthorize.m */,
+			);
+			path = Authorize;
+			sourceTree = "<group>";
+		};
+		BDF9093416B7E7A100119B4A /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9093516B7E7A100119B4A /* MSKaixinFriendsMe.h */,
+				BDF9093616B7E7A100119B4A /* MSKaixinFriendsMe.m */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		BDF9093916B7E7A100119B4A /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9093A16B7E7A100119B4A /* MSKaixinPageAddFan.h */,
+				BDF9093B16B7E7A100119B4A /* MSKaixinPageAddFan.m */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		BDF9093C16B7E7A100119B4A /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9093D16B7E7A100119B4A /* MSKaixinAlbumShow.h */,
+				BDF9093E16B7E7A100119B4A /* MSKaixinAlbumShow.m */,
+				BDF9093F16B7E7A100119B4A /* MSKaixinPhotoUpload.h */,
+				BDF9094016B7E7A100119B4A /* MSKaixinPhotoUpload.m */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		BDF9094116B7E7A100119B4A /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9094216B7E7A100119B4A /* MSKaixinRecordsUpload.h */,
+				BDF9094316B7E7A100119B4A /* MSKaixinRecordsUpload.m */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		BDF9094416B7E7A100119B4A /* Renren */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9094516B7E7A100119B4A /* Authorize */,
+				BDF9094A16B7E7A100119B4A /* Friends */,
+				BDF9094D16B7E7A100119B4A /* MSRenrenPackage.h */,
+				BDF9094E16B7E7A100119B4A /* MSRenrenPackage.m */,
+				BDF9094F16B7E7A100119B4A /* Pages */,
+				BDF9095216B7E7A100119B4A /* Photos */,
+				BDF9095716B7E7A100119B4A /* Status */,
+			);
+			path = Renren;
+			sourceTree = "<group>";
+		};
+		BDF9094516B7E7A100119B4A /* Authorize */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9094616B7E7A100119B4A /* MSRenrenAuthorize.h */,
+				BDF9094716B7E7A100119B4A /* MSRenrenAuthorize.m */,
+				BDF9094816B7E7A100119B4A /* MSRenrenToken.h */,
+				BDF9094916B7E7A100119B4A /* MSRenrenToken.m */,
+			);
+			path = Authorize;
+			sourceTree = "<group>";
+		};
+		BDF9094A16B7E7A100119B4A /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9094B16B7E7A100119B4A /* MSRenrenFriendsGetFriends.h */,
+				BDF9094C16B7E7A100119B4A /* MSRenrenFriendsGetFriends.m */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		BDF9094F16B7E7A100119B4A /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9095016B7E7A100119B4A /* MSRenrenPagesBecomeFan.h */,
+				BDF9095116B7E7A100119B4A /* MSRenrenPagesBecomeFan.m */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		BDF9095216B7E7A100119B4A /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9095316B7E7A100119B4A /* MSRenrenPhotosGetAlbums.h */,
+				BDF9095416B7E7A100119B4A /* MSRenrenPhotosGetAlbums.m */,
+				BDF9095516B7E7A100119B4A /* MSRenrenPhototsUpload.h */,
+				BDF9095616B7E7A100119B4A /* MSRenrenPhototsUpload.m */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		BDF9095716B7E7A100119B4A /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9095816B7E7A100119B4A /* MSRenrenStatusSet.h */,
+				BDF9095916B7E7A100119B4A /* MSRenrenStatusSet.m */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		BDF9095A16B7E7A100119B4A /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9095B16B7E7A100119B4A /* Account */,
+				BDF9095E16B7E7A100119B4A /* Authorize */,
+				BDF9096116B7E7A100119B4A /* Friendship */,
+				BDF9096816B7E7A100119B4A /* MSSinaWeiboPackage.h */,
+				BDF9096916B7E7A100119B4A /* MSSinaWeiboPackage.m */,
+				BDF9096A16B7E7A100119B4A /* Push */,
+				BDF9096F16B7E7A100119B4A /* User */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		BDF9095B16B7E7A100119B4A /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9095C16B7E7A100119B4A /* MSSinaAccountGetUID.h */,
+				BDF9095D16B7E7A100119B4A /* MSSinaAccountGetUID.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		BDF9095E16B7E7A100119B4A /* Authorize */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9095F16B7E7A100119B4A /* MSSinaAccessToken.h */,
+				BDF9096016B7E7A100119B4A /* MSSinaAccessToken.m */,
+			);
+			path = Authorize;
+			sourceTree = "<group>";
+		};
+		BDF9096116B7E7A100119B4A /* Friendship */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9096216B7E7A100119B4A /* MSSinaFriendshipCreate.h */,
+				BDF9096316B7E7A100119B4A /* MSSinaFriendshipCreate.m */,
+				BDF9096416B7E7A100119B4A /* MSSinaFriendshipsDestroy.h */,
+				BDF9096516B7E7A100119B4A /* MSSinaFriendshipsDestroy.m */,
+				BDF9096616B7E7A100119B4A /* MSSinaFriendshipsFriends.h */,
+				BDF9096716B7E7A100119B4A /* MSSinaFriendshipsFriends.m */,
+			);
+			path = Friendship;
+			sourceTree = "<group>";
+		};
+		BDF9096A16B7E7A100119B4A /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9096B16B7E7A100119B4A /* MSSinaStatusUpdate.h */,
+				BDF9096C16B7E7A100119B4A /* MSSinaStatusUpdate.m */,
+				BDF9096D16B7E7A100119B4A /* MSSinaStatusUpload.h */,
+				BDF9096E16B7E7A100119B4A /* MSSinaStatusUpload.m */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		BDF9096F16B7E7A100119B4A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9097016B7E7A100119B4A /* MSSinaUserShow.h */,
+				BDF9097116B7E7A100119B4A /* MSSinaUserShow.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BDF9097216B7E7A100119B4A /* Tencent */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9097316B7E7A100119B4A /* Authorize */,
+				BDF9097616B7E7A100119B4A /* Friends */,
+				BDF9097916B7E7A100119B4A /* MSTencentWeiboPackage.h */,
+				BDF9097A16B7E7A100119B4A /* MSTencentWeiboPackage.m */,
+				BDF9097B16B7E7A100119B4A /* Push */,
+			);
+			path = Tencent;
+			sourceTree = "<group>";
+		};
+		BDF9097316B7E7A100119B4A /* Authorize */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9097416B7E7A100119B4A /* MSTencentAccessToken.h */,
+				BDF9097516B7E7A100119B4A /* MSTencentAccessToken.m */,
+			);
+			path = Authorize;
+			sourceTree = "<group>";
+		};
+		BDF9097616B7E7A100119B4A /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9097716B7E7A100119B4A /* MSTencentFriends.h */,
+				BDF9097816B7E7A100119B4A /* MSTencentFriends.m */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		BDF9097B16B7E7A100119B4A /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9097C16B7E7A100119B4A /* MSTencentPicWeibo.h */,
+				BDF9097D16B7E7A100119B4A /* MSTencentPicWeibo.m */,
+				BDF9097E16B7E7A100119B4A /* MSTencentWeiboAdd.h */,
+				BDF9097F16B7E7A100119B4A /* MSTencentWeiboAdd.m */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1098,6 +1685,7 @@
 				BD440B97167761C900E8F4A5 /* ChangeLog in Resources */,
 				BD440DCC1677632200E8F4A5 /* pic in Resources */,
 				BDEC6CD51679E74600304640 /* ini in Resources */,
+				BDF9098316B7E7A100119B4A /* MobiSageRecommendBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,6 +1696,66 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF909CC16B7FD0900119B4A /* libMobiSageMediatorSDK_2.1.2.a in Sources */,
+				BDF909CD16B7FD0900119B4A /* libMobiSageRecommend.a in Sources */,
+				BDF909CE16B7FD0900119B4A /* libMobiSageMediatorSDK_2.1.2.a in Sources */,
+				BDF909CF16B7FD0900119B4A /* AdSageAdapter.h in Sources */,
+				BDF909D016B7FD0900119B4A /* AdSageDelegate.h in Sources */,
+				BDF909D116B7FD0900119B4A /* AdSageManager.h in Sources */,
+				BDF909D216B7FD0900119B4A /* AdSageView.h in Sources */,
+				BDF909D316B7FD0900119B4A /* AderDelegateProtocal.h in Sources */,
+				BDF909D416B7FD0900119B4A /* AderSDK.h in Sources */,
+				BDF909D516B7FD0900119B4A /* libAderSDK.a in Sources */,
+				BDF909D616B7FD0900119B4A /* AdSageAdapterAder.h in Sources */,
+				BDF909D716B7FD0900119B4A /* AdSageAdapterAdMob.h in Sources */,
+				BDF909D816B7FD0900119B4A /* GADAdMobExtras.h in Sources */,
+				BDF909D916B7FD0900119B4A /* GADAdNetworkExtras.h in Sources */,
+				BDF909DA16B7FD0900119B4A /* GADAdSize.h in Sources */,
+				BDF909DB16B7FD0900119B4A /* GADBannerView.h in Sources */,
+				BDF909DC16B7FD0900119B4A /* GADBannerViewDelegate.h in Sources */,
+				BDF909DD16B7FD0900119B4A /* GADInterstitial.h in Sources */,
+				BDF909DE16B7FD0900119B4A /* GADInterstitialDelegate.h in Sources */,
+				BDF909DF16B7FD0900119B4A /* GADRequest.h in Sources */,
+				BDF909E016B7FD0900119B4A /* GADRequestError.h in Sources */,
+				BDF909E116B7FD0900119B4A /* libGoogleAdMobAds.a in Sources */,
+				BDF909A616B7FCCB00119B4A /* AdSageAdapter.h in Sources */,
+				BDF909A716B7FCCB00119B4A /* AdSageDelegate.h in Sources */,
+				BDF909A816B7FCCB00119B4A /* AdSageManager.h in Sources */,
+				BDF909A916B7FCCB00119B4A /* AdSageView.h in Sources */,
+				BDF909AA16B7FCCB00119B4A /* JSONKit.h in Sources */,
+				BDF909AB16B7FCCB00119B4A /* MobiSageRecommendSDK.h in Sources */,
+				BDF909AC16B7FCCB00119B4A /* MobiSageSDK.h in Sources */,
+				BDF909AD16B7FCCB00119B4A /* MobiSageSNSPackage.h in Sources */,
+				BDF909AE16B7FCCB00119B4A /* MSKaixinAccessToken.h in Sources */,
+				BDF909AF16B7FCCB00119B4A /* MSKaixinAuthorize.h in Sources */,
+				BDF909B016B7FCCB00119B4A /* MSKaixinFriendsMe.h in Sources */,
+				BDF909B116B7FCCB00119B4A /* MSKaixinPackage.h in Sources */,
+				BDF909B216B7FCCB00119B4A /* MSKaixinPageAddFan.h in Sources */,
+				BDF909B316B7FCCB00119B4A /* MSKaixinAlbumShow.h in Sources */,
+				BDF909B416B7FCCB00119B4A /* MSKaixinPhotoUpload.h in Sources */,
+				BDF909B516B7FCCC00119B4A /* MSKaixinRecordsUpload.h in Sources */,
+				BDF909B616B7FCCC00119B4A /* MSRenrenAuthorize.h in Sources */,
+				BDF909B716B7FCCC00119B4A /* MSRenrenToken.h in Sources */,
+				BDF909B816B7FCCC00119B4A /* MSRenrenFriendsGetFriends.h in Sources */,
+				BDF909B916B7FCCC00119B4A /* MSRenrenPackage.h in Sources */,
+				BDF909BA16B7FCCC00119B4A /* MSRenrenPagesBecomeFan.h in Sources */,
+				BDF909BB16B7FCCC00119B4A /* MSRenrenPhotosGetAlbums.h in Sources */,
+				BDF909BC16B7FCCC00119B4A /* MSRenrenPhototsUpload.h in Sources */,
+				BDF909BD16B7FCCC00119B4A /* MSRenrenStatusSet.h in Sources */,
+				BDF909BE16B7FCCC00119B4A /* MSSinaAccountGetUID.h in Sources */,
+				BDF909BF16B7FCCC00119B4A /* MSSinaAccessToken.h in Sources */,
+				BDF909C016B7FCCC00119B4A /* MSSinaFriendshipCreate.h in Sources */,
+				BDF909C116B7FCCC00119B4A /* MSSinaFriendshipsDestroy.h in Sources */,
+				BDF909C216B7FCCC00119B4A /* MSSinaFriendshipsFriends.h in Sources */,
+				BDF909C316B7FCCC00119B4A /* MSSinaWeiboPackage.h in Sources */,
+				BDF909C416B7FCCC00119B4A /* MSSinaStatusUpdate.h in Sources */,
+				BDF909C516B7FCCC00119B4A /* MSSinaStatusUpload.h in Sources */,
+				BDF909C616B7FCCC00119B4A /* MSSinaUserShow.h in Sources */,
+				BDF909C716B7FCCC00119B4A /* MSTencentAccessToken.h in Sources */,
+				BDF909C816B7FCCC00119B4A /* MSTencentFriends.h in Sources */,
+				BDF909C916B7FCCC00119B4A /* MSTencentWeiboPackage.h in Sources */,
+				BDF909CA16B7FCCC00119B4A /* MSTencentPicWeibo.h in Sources */,
+				BDF909CB16B7FCCC00119B4A /* MSTencentWeiboAdd.h in Sources */,
 				BD440A5E167761C800E8F4A5 /* CCAction.m in Sources */,
 				BD440A61167761C800E8F4A5 /* CCActionCamera.m in Sources */,
 				BD440A64167761C800E8F4A5 /* CCActionCatmullRom.m in Sources */,
@@ -1235,6 +1883,39 @@
 				BD3AEF10169FCF8D003153C4 /* ControlCreater.m in Sources */,
 				BDC7DE1716A2A2190031683A /* TypeBombInfoMeta.m in Sources */,
 				BDC7DE1C16A2A38E0031683A /* GameTypeBombView.m in Sources */,
+				BDF9091516B7E72800119B4A /* AdSageAdapterAder.m in Sources */,
+				BDF9091716B7E72800119B4A /* AdSageAdapterAdMob.m in Sources */,
+				BDF9098216B7E7A100119B4A /* JSONKit.m in Sources */,
+				BDF9098416B7E7A100119B4A /* MSKaixinAccessToken.m in Sources */,
+				BDF9098516B7E7A100119B4A /* MSKaixinAuthorize.m in Sources */,
+				BDF9098616B7E7A100119B4A /* MSKaixinFriendsMe.m in Sources */,
+				BDF9098716B7E7A100119B4A /* MSKaixinPackage.m in Sources */,
+				BDF9098816B7E7A100119B4A /* MSKaixinPageAddFan.m in Sources */,
+				BDF9098916B7E7A100119B4A /* MSKaixinAlbumShow.m in Sources */,
+				BDF9098A16B7E7A100119B4A /* MSKaixinPhotoUpload.m in Sources */,
+				BDF9098B16B7E7A100119B4A /* MSKaixinRecordsUpload.m in Sources */,
+				BDF9098C16B7E7A100119B4A /* MSRenrenAuthorize.m in Sources */,
+				BDF9098D16B7E7A100119B4A /* MSRenrenToken.m in Sources */,
+				BDF9098E16B7E7A100119B4A /* MSRenrenFriendsGetFriends.m in Sources */,
+				BDF9098F16B7E7A100119B4A /* MSRenrenPackage.m in Sources */,
+				BDF9099016B7E7A100119B4A /* MSRenrenPagesBecomeFan.m in Sources */,
+				BDF9099116B7E7A100119B4A /* MSRenrenPhotosGetAlbums.m in Sources */,
+				BDF9099216B7E7A100119B4A /* MSRenrenPhototsUpload.m in Sources */,
+				BDF9099316B7E7A100119B4A /* MSRenrenStatusSet.m in Sources */,
+				BDF9099416B7E7A100119B4A /* MSSinaAccountGetUID.m in Sources */,
+				BDF9099516B7E7A100119B4A /* MSSinaAccessToken.m in Sources */,
+				BDF9099616B7E7A100119B4A /* MSSinaFriendshipCreate.m in Sources */,
+				BDF9099716B7E7A100119B4A /* MSSinaFriendshipsDestroy.m in Sources */,
+				BDF9099816B7E7A100119B4A /* MSSinaFriendshipsFriends.m in Sources */,
+				BDF9099916B7E7A100119B4A /* MSSinaWeiboPackage.m in Sources */,
+				BDF9099A16B7E7A100119B4A /* MSSinaStatusUpdate.m in Sources */,
+				BDF9099B16B7E7A100119B4A /* MSSinaStatusUpload.m in Sources */,
+				BDF9099C16B7E7A100119B4A /* MSSinaUserShow.m in Sources */,
+				BDF9099D16B7E7A100119B4A /* MSTencentAccessToken.m in Sources */,
+				BDF9099E16B7E7A100119B4A /* MSTencentFriends.m in Sources */,
+				BDF9099F16B7E7A100119B4A /* MSTencentWeiboPackage.m in Sources */,
+				BDF909A016B7E7A100119B4A /* MSTencentPicWeibo.m in Sources */,
+				BDF909A116B7E7A100119B4A /* MSTencentWeiboAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1292,8 +1973,15 @@
 				HEADER_SEARCH_PATHS = "\"Fun/libs/kazmath/include\"";
 				INFOPLIST_FILE = Fun/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Fun\"",
+					"\"$(SRCROOT)/Fun/AdSage_iOS_SDK/Adapter File/Ader\"",
+					"\"$(SRCROOT)/Fun/AdSage_iOS_SDK/Adapter File/AdMob\"",
+					"\"$(SRCROOT)/Fun/AdSage_iOS_SDK\"",
+				);
 				OTHER_LDFLAGS = (
-					"-lz",
+					"-all_load",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1311,8 +1999,15 @@
 				HEADER_SEARCH_PATHS = "\"Fun/libs/kazmath/include\"";
 				INFOPLIST_FILE = Fun/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Fun\"",
+					"\"$(SRCROOT)/Fun/AdSage_iOS_SDK/Adapter File/Ader\"",
+					"\"$(SRCROOT)/Fun/AdSage_iOS_SDK/Adapter File/AdMob\"",
+					"\"$(SRCROOT)/Fun/AdSage_iOS_SDK\"",
+				);
 				OTHER_LDFLAGS = (
-					"-lz",
+					"-all_load",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

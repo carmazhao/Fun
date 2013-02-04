@@ -126,6 +126,7 @@
     //构造划线的layer
     m_line_view = [[LineView alloc]init];
     m_line_view.isTouchEnabled = YES;
+    [m_line_view set_base_pos:BASE_X:BASE_Y];
     [self addChild:m_line_view];
 }
 
@@ -297,8 +298,8 @@
                  ABS(m_pre_point.x - tmp.m_coor.x)==1)) {
                     tmp.m_passed = YES;
                     //计算一根线
-                    line.m_begin_pos = CGPointMake(BASE_X + m_pre_point.x*57*[GameState get_instance].m_ratio, BASE_Y + m_pre_point.y*57*[GameState get_instance].m_ratio);
-                    line.m_end_pos = CGPointMake(BASE_X + tmp.m_coor.x*57*[GameState get_instance].m_ratio, BASE_Y + tmp.m_coor.y*57*[GameState get_instance].m_ratio);
+                    line.m_begin_pos = CGPointMake(m_pre_point.x, m_pre_point.y);
+                    line.m_end_pos = CGPointMake(tmp.m_coor.x,tmp.m_coor.y);
                     [m_line_view.m_lines_arr addObject:line];
                     m_pre_point = tmp.m_coor;
                 }
