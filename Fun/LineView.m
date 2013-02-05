@@ -45,7 +45,14 @@
     for (NSInteger i = 0; i < [m_lines_arr count]; i++) {
         TraceLine * line = [m_lines_arr objectAtIndex:i];
         if (line.m_begin_pos.m_coor.x == x &&
-            line.m_begin_pos.m_coor.y) {
+            line.m_begin_pos.m_coor.y == y) {
+            
+            //把所有去掉的节点制成未pass
+            for (NSInteger j = i; j < [m_lines_arr count]; j++) {
+                TraceLine * tmp = [m_lines_arr objectAtIndex:j];
+              //  tmp.m_begin_pos.m_passed = NO;
+                tmp.m_end_pos.m_passed = NO;
+            }
             [m_lines_arr removeObjectsInRange:NSMakeRange(i, [m_lines_arr count] - i)];
         }
     }

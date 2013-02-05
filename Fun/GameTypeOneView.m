@@ -24,7 +24,7 @@
 @synthesize m_block_arr;
 @synthesize m_begin_block;
 @synthesize m_end_block;
-@synthesize m_pre_point;
+@synthesize m_pre_block;
 @synthesize m_line_view;
 @synthesize m_time_label;
 
@@ -258,7 +258,7 @@
 
     if (CGRectContainsPoint([m_begin_block.m_sprite boundingBox], pos)) {
         m_begin_block.m_passed = YES;
-        m_pre_point = m_begin_block.m_coor;
+        m_pre_block = m_begin_block;
     }
 }
 
@@ -292,16 +292,16 @@
             if (!CGRectContainsPoint([tmp.m_sprite boundingBox], pos)) {
                 continue;
             }
-            if ((m_pre_point.x == tmp.m_coor.x &&
-                 ABS(m_pre_point.y - tmp.m_coor.y)==1)||
-                (m_pre_point.y == tmp.m_coor.y&&
-                 ABS(m_pre_point.x - tmp.m_coor.x)==1)) {
+            if ((m_pre_block.m_coor.x == tmp.m_coor.x &&
+                 ABS(m_pre_block.m_coor.y - tmp.m_coor.y)==1)||
+                (m_pre_block.m_coor.y == tmp.m_coor.y&&
+                 ABS(m_pre_block.m_coor.x - tmp.m_coor.x)==1)) {
                     tmp.m_passed = YES;
                     //计算一根线
-                    line.m_begin_pos = CGPointMake(m_pre_point.x, m_pre_point.y);
-                    line.m_end_pos = CGPointMake(tmp.m_coor.x,tmp.m_coor.y);
-                    [m_line_view.m_lines_arr addObject:line];
-                    m_pre_point = tmp.m_coor;
+                    line.m_begin_pos = m_pre_block;
+                    line.m_end_pos = tmp;
+                    [m_line_view add_line:line];
+                    m_pre_block = tmp;
                 }
         }
     }

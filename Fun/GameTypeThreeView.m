@@ -22,7 +22,7 @@
 @synthesize m_block_arr;
 @synthesize m_begin_block;
 @synthesize m_end_block;
-@synthesize m_pre_point;
+@synthesize m_pre_block;
 @synthesize m_line_view;
 @synthesize m_score_label;
 
@@ -179,7 +179,7 @@
     
     if (CGRectContainsPoint([m_begin_block.m_sprite boundingBox], pos)) {
         m_begin_block.m_passed = YES;
-        m_pre_point = m_begin_block.m_coor;
+        m_pre_block = m_begin_block;
     }
 }
 
@@ -200,19 +200,19 @@
             if (!CGRectContainsPoint([tmp.m_sprite boundingBox], pos)) {
                 continue;
             }
-            if ((m_pre_point.x == tmp.m_coor.x &&
-                 ABS(m_pre_point.y - tmp.m_coor.y)==1)||
-                (m_pre_point.y == tmp.m_coor.y&&
-                 ABS(m_pre_point.x - tmp.m_coor.x)==1)) {
+            if ((m_pre_block.m_coor.x == tmp.m_coor.x &&
+                 ABS(m_pre_block.m_coor.y - tmp.m_coor.y)==1)||
+                (m_pre_block.m_coor.y == tmp.m_coor.y&&
+                 ABS(m_pre_block.m_coor.x - tmp.m_coor.x)==1)) {
                     
                     tmp.m_passed = YES;
                     [[ScoreCounter get_instance]add_score:tmp.m_value];
                     [m_score_label setString:[[ScoreCounter get_instance]get_score_string]];
                     //计算一根线
-                    line.m_begin_pos = CGPointMake(BASE_X + m_pre_point.x*57, BASE_Y + m_pre_point.y*57);
-                    line.m_end_pos = CGPointMake(BASE_X + tmp.m_coor.x*57, BASE_Y + tmp.m_coor.y*57);
+                    line.m_begin_pos = m_pre_block;
+                    line.m_end_pos = m_pre_block;
                     [m_line_view.m_lines_arr addObject:line];
-                    m_pre_point = tmp.m_coor;
+                    m_pre_block = tmp;
                 }
         }
     }

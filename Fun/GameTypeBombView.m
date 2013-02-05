@@ -20,7 +20,7 @@
 @synthesize m_active_block_arr;
 @synthesize m_time_label;
 @synthesize m_line_view;
-@synthesize m_pre_point;
+@synthesize m_pre_block;
 
 +(id)scene{
     CCScene * scene = [CCScene node];
@@ -266,9 +266,12 @@
     CGPoint pos = [touch locationInView:[touch view]];
     pos = [[CCDirector sharedDirector]convertToGL:pos];
     
+    //清空永远也不用划线的最后一格
+    m_end_block.m_passed = NO;
+    //从第一个格子开始的话
     if (CGRectContainsPoint([m_begin_block.m_sprite boundingBox], pos)) {
         m_begin_block.m_passed = YES;
-        m_pre_point = m_begin_block.m_coor;
+        m_pre_block = m_begin_block;
         [m_line_view delete_lines_begin_by:0 :0];
     }
     
@@ -276,7 +279,11 @@
     for (NSInteger i = 0; i < [m_block_arr count]; i++) {
         GameBlock * tmp_block = [m_block_arr objectAtIndex:i];
         if (CGRectContainsPoint([tmp_block.m_sprite boundingBox], pos)) {
+            if (tmp_block.m_passed == NO) {
+                break;
+            }
             [m_line_view delete_lines_begin_by:tmp_block.m_coor.x :tmp_block.m_coor.y];
+            m_pre_block = tmp_block;
         }
     }
 }
@@ -290,14 +297,14 @@
     
     if (CGRectContainsPoint([m_end_block.m_sprite boundingBox], pos)&&
         m_end_block.m_passed != YES) {
+        NSLog(@"here");
         m_end_block.m_passed = YES;
-        for (NSInteger i = 0; i < [m_block_arr count]; i++) {
-            GameBlock * tmp = [m_block_arr objectAtIndex:i];
-            if (!tmp.m_passed) {
-                return;
-            }
+        if ((m_pre_block.m_coor.x == m_end_block.m_coor.x &&
+             ABS(m_pre_block.m_coor.y - m_end_block.m_coor.y)==1)||
+            (m_pre_block.m_coor.y == m_end_block.m_coor.y&&
+             ABS(m_pre_block.m_coor.x - m_end_block.m_coor.x)==1)) {
+            [self game_pass];
         }
-        [self game_pass];
     }
     
     if (m_begin_block.m_passed == YES) {
@@ -311,16 +318,16 @@
             if (!CGRectContainsPoint([tmp.m_sprite boundingBox], pos)) {
                 continue;
             }
-            if ((m_pre_point.x == tmp.m_coor.x &&
-                 ABS(m_pre_point.y - tmp.m_coor.y)==1)||
-                (m_pre_point.y == tmp.m_coor.y&&
-                 ABS(m_pre_point.x - tmp.m_coor.x)==1)) {
+            if ((m_pre_block.m_coor.x == tmp.m_coor.x &&
+                 ABS(m_pre_block.m_coor.y - tmp.m_coor.y)==1)||
+                (m_pre_block.m_coor.y == tmp.m_coor.y&&
+                 ABS(m_pre_block.m_coor.x - tmp.m_coor.x)==1)) {
                     tmp.m_passed = YES;
                     //计算一根线
-                    line.m_begin_pos = CGPointMake(m_pre_point.x, m_pre_point.y);
-                    line.m_end_pos = CGPointMake(tmp.m_coor.x,tmp.m_coor.y);
+                    line.m_begin_pos = m_pre_block;
+                    line.m_end_pos = tmp;
                     [m_line_view.m_lines_arr addObject:line];
-                    m_pre_point = tmp.m_coor;
+                    m_pre_block = tmp;
                 }
         }
     }
@@ -351,7 +358,7 @@
         default:
             break;
     }
-  
+    NSLog(@"pass!!");
 }
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
 }

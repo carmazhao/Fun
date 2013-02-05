@@ -26,7 +26,7 @@
 @property(nonatomic , retain)GameBlock *      m_begin_block;
 @property(nonatomic , retain)GameBlock *      m_end_block;
 @property(nonatomic , retain)NSMutableArray * m_active_block_arr;//记录前一个滑到的点的横纵编号
-@property(nonatomic)CGPoint                   m_pre_point;//记录前一个滑到的点的横纵编号
+@property(nonatomic , retain)GameBlock *      m_pre_block;//记录前一个滑到的点的横纵编号
 @property(nonatomic , retain)LineView *       m_line_view;
 @property(nonatomic , retain)CCLabelAtlas*    m_time_label;//用于显示时间的label
 +(id)scene;
