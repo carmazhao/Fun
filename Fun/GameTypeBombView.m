@@ -89,17 +89,16 @@
             //检查是否在有雷
             for (NSInteger k = 0; k < [bomb_arr count]; k++) {
                 GamePoint * gp = [bomb_arr objectAtIndex:k];
-                if (gp.m_x == i && gp.m_y == j) {
+                if (gp.m_x == j && gp.m_y == i) {
                     block.m_value = HAS_BOMB;
                     break;
                 }else{
                     //搜索周围的雷
-                    if ((j == gp.m_x + 1 ||
-                         j == gp.m_x - 1 ||
-                         j == gp.m_x) &&
-                        (i == gp.m_y + 1 ||
-                         i == gp.m_y - 1 ||
-                         i == gp.m_y)) {
+                    if ((gp.m_x == j &&
+                         ABS(gp.m_y - i)==1)||
+                        (gp.m_y == i&&
+                         ABS(gp.m_x - j)==1) ||
+                        (ABS(gp.m_x - j)==1 && ABS(gp.m_y - i)==1)) {
                             block.m_value++;
                     }
                 }
@@ -121,7 +120,7 @@
     [self addChild:end_circle];
     
     //test
-    for (NSInteger m = 0; m < [m_block_arr count]; m++) {
+    /*for (NSInteger m = 0; m < [m_block_arr count]; m++) {
         GameBlock * blocktmp = [m_block_arr objectAtIndex:m];
         if (blocktmp.m_value ==  -1) {
             continue;
@@ -130,7 +129,7 @@
         CCSprite * tmp = [CCSprite spriteWithFile:val_str];
         tmp.position = CGPointMake(base_pos.x + blocktmp.m_coor.x*57*[GameState get_instance].m_ratio, base_pos.y + blocktmp.m_coor.y*57*[GameState get_instance].m_ratio);
         [self addChild:tmp];
-    }
+    }*/
     //构造划线的layer
     m_line_view = [[LineView alloc]init];
     m_line_view.isTouchEnabled = YES;
@@ -297,7 +296,6 @@
     
     if (CGRectContainsPoint([m_end_block.m_sprite boundingBox], pos)&&
         m_end_block.m_passed != YES) {
-        NSLog(@"here");
         m_end_block.m_passed = YES;
         if ((m_pre_block.m_coor.x == m_end_block.m_coor.x &&
              ABS(m_pre_block.m_coor.y - m_end_block.m_coor.y)==1)||
@@ -322,6 +320,11 @@
                  ABS(m_pre_block.m_coor.y - tmp.m_coor.y)==1)||
                 (m_pre_block.m_coor.y == tmp.m_coor.y&&
                  ABS(m_pre_block.m_coor.x - tmp.m_coor.x)==1)) {
+                    if (tmp.m_opened == NO) {
+                        [self show_grids:tmp];
+                        tmp.m_opened = YES;
+                    }
+                    
                     tmp.m_passed = YES;
                     //计算一根线
                     line.m_begin_pos = m_pre_block;
@@ -332,6 +335,42 @@
         }
     }
     [line release];
+}
+
+-(void)show_grids:(GameBlock *)block{
+    if (block.m_value == -1) {
+        return;
+    }
+    NSString * val_str = [NSString stringWithFormat:@"pic/%d.png" , block.m_value];
+    CCSprite * tmp = [CCSprite spriteWithFile:val_str];
+    tmp.position = CGPointMake(BASE_X + block.m_coor.x*57*[GameState get_instance].m_ratio, BASE_Y + block.m_coor.y*57*[GameState get_instance].m_ratio);
+    [self addChild:tmp];
+    block.m_opened = YES;
+    if (block.m_value !=0 ) {
+        return;
+    }
+    
+    
+    for (NSInteger i = 0; i < [m_block_arr count]; i++) {
+        GameBlock * g_b = [m_block_arr objectAtIndex:i];
+        NSInteger x = g_b.m_coor.x;
+        NSInteger y = g_b.m_coor.y;
+        if ((block.m_coor.x == x &&
+             ABS(block.m_coor.y - y)==1)||
+            (block.m_coor.y == y&&
+             ABS(block.m_coor.x - x)==1) ||
+            (ABS(block.m_coor.x - x)==1 && ABS(block.m_coor.y - y)==1)) {
+                if (g_b.m_value ==  -1 ||
+                    g_b.m_opened == YES) {
+                    continue;
+                }
+                NSString * val_str = [NSString stringWithFormat:@"pic/%d.png" , g_b.m_value];
+                CCSprite * tmp = [CCSprite spriteWithFile:val_str];
+                tmp.position = CGPointMake(BASE_X + g_b.m_coor.x*57*[GameState get_instance].m_ratio, BASE_Y + g_b.m_coor.y*57*[GameState get_instance].m_ratio);
+                [self addChild:tmp];
+            g_b.m_opened = YES;
+        }
+    }
 }
 -(void)game_pass{
     //将计时器停住
